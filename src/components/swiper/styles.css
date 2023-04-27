@@ -25,13 +25,35 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
-  font-family: AmericanTypewriterLight;
-  font-size: 18px;
-  line-height: 32px;
+  font-family: AmericanTypewriterStdLight;
+  font-size: 16px;
+  line-height: 30px;
   color: #170306;
 }
+.slide-title {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.font-medium {
+  font-family: AmericanTypewriterStdMed;
+}
+.slide-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.show-for-mob {
+  display: none;
+}
 .slide-content {
-  max-width: 450px;
+  max-width: 550px;
+}
+.slide-wrapper1 .slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 148px;
 }
 .slide-content img {
   width: 40px;
@@ -65,31 +87,34 @@
 }
 
 .swiper-slide-active .slide-wrapper1 {
-  animation: changeBg1 4s;
+  animation: changeBg1 ease-in 2.25s;
+  animation-delay: 0.25s;
   animation-fill-mode: forwards;
 }
 .swiper-slide-active .slide-wrapper2 {
-  animation: changeBg2 6s;
+  animation: changeBg2 ease-out 2.25s;
+  /* animation-delay: 0.25s; */
   animation-fill-mode: forwards;
 }
 .swiper-slide-active .slide-wrapper3 {
-  animation: changeBg3 6s;
+  animation: changeBg3 ease-out 2.25s;
+  /* animation-delay: 0.25s; */
   animation-fill-mode: forwards;
 }
 .swiper-slide-active .slide-wrapper4 {
-  animation: changeBg4 6s;
+  animation: changeBg4 ease-out 2.25s;
   animation-fill-mode: forwards;
 }
 .swiper-slide-active .slide-wrapper5 {
-  animation: changeBg5 6s;
+  animation: changeBg5 ease-out 2.25s;
   animation-fill-mode: forwards;
 }
 .swiper-slide-active .slide-wrapper6 {
-  animation: changeBg6 6s;
+  animation: changeBg6 ease-out 2.25s;
   animation-fill-mode: forwards;
 }
 .swiper-slide-active .slide-wrapper7 {
-  animation: changeBg7 6s;
+  animation: changeBg7 ease-out 2.25s;
   animation-fill-mode: forwards;
 }
 .swiper-slide-active .slide-wrapper8 .slide-content {
@@ -184,61 +209,81 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-  bottom: 69px !important;
+  bottom: 34px !important;
 }
 .swiper-pagination-bullet {
-  width: 15px !important;
-  height: 15px !important;
+  width: 12px !important;
+  height: 12px !important;
   border-radius: 0% !important;
   margin-right: 10px !important;
   opacity: 1 !important;
 }
 
 .triangle {
-  background: url(../../assets/icons/Triangle.svg) !important;
+  background: url(../../assets/icons/Triangle.png) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  background-size: contain !important;
 }
 .circle {
-  background: url(../../assets/icons/Circle.svg) !important;
+  background: url(../../assets/icons/Circle.png) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  background-size: contain !important;
 }
 .square {
-  background: url(../../assets/icons/Square.svg) !important;
+  background: url(../../assets/icons/Square.png) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  background-size: contain !important;
 }
 .star {
-  background: url(../../assets/icons/Star.svg) !important;
+  background: url(../../assets/icons/Star.png) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  background-size: contain !important;
 }
 .swiper-pagination-bullet-active[data-value="triangle"] {
-  background: url(../../assets/icons/Triangle-active.svg) !important;
+  background: url(../../assets/icons/Triangle-active.png) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  background-size: contain !important;
 }
 .swiper-pagination-bullet-active[data-value="star"] {
-  background: url(../../assets/icons/Star-active.svg) !important;
+  background: url(../../assets/icons/Star-active.png) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  background-size: contain !important;
 }
 .swiper-pagination-bullet-active[data-value="circle"] {
-  background: url(../../assets/icons/Circle-active.svg) !important;
+  background: url(../../assets/icons/Circle-active.png) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  background-size: contain !important;
 }
 .swiper-pagination-bullet-active[data-value="square"] {
-  background: url(../../assets/icons/Square-active.svg) !important;
+  background: url(../../assets/icons/Square-active.png) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  background-size: contain !important;
 }
-
+@media screen and (max-width: 1440px) {
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 20px !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .swiper-slide {
     background-image: url(../../assets/mobile/basic-mob-bg.png);
     font-size: 12px;
+    line-height: 20px;
   }
   .slide-content {
     max-width: 350px;
@@ -250,10 +295,16 @@
     margin-bottom: 5px;
   }
   .slide-content img {
-    width: 30px;
+    width: 20px;
     height: 20px;
     object-fit: contain;
     margin-right: 15px;
+  }
+  .show-for-mob {
+    display: inline;
+  }
+  .show-for-web {
+    display: none;
   }
   .slide-content-slide3 {
     display: flex;
@@ -263,37 +314,46 @@
     flex-direction: column;
     align-items: flex-start;
     margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .slide-wrapper1 .slide-content {
+    height: 94px;
+  }
+  .slide-title {
+    font-size: 14px;
   }
   .swiper-pagination {
     display: none !important;
   }
 
   .swiper-slide-active .slide-wrapper1 {
-    animation: changeBgMob1 4s;
+    animation: changeBgMob1 ease-in 2.25s;
+    animation-delay: 0.25s;
     animation-fill-mode: forwards;
   }
   .swiper-slide-active .slide-wrapper2 {
-    animation: changeBgMob2 4s;
+    animation: changeBgMob2 ease-out 2.25s;
     animation-fill-mode: forwards;
   }
   .swiper-slide-active .slide-wrapper3 {
-    animation: changeBgMob3 4s;
+    animation: changeBgMob3 ease-out 2.25s;
     animation-fill-mode: forwards;
   }
   .swiper-slide-active .slide-wrapper4 {
-    animation: changeBgMob4 4s;
+    animation: changeBgMob4 ease-out 2.25s;
     animation-fill-mode: forwards;
   }
   .swiper-slide-active .slide-wrapper5 {
-    animation: changeBgMob5 4s;
+    animation: changeBgMob5 ease-out 2.25s;
     animation-fill-mode: forwards;
   }
   .swiper-slide-active .slide-wrapper6 {
-    animation: changeBgMob6 4s;
+    animation: changeBgMob6 ease-out 2.25s;
     animation-fill-mode: forwards;
   }
   .swiper-slide-active .slide-wrapper7 {
-    animation: changeBgMob7 4s;
+    animation: changeBgMob7 ease-out 2.25s;
     animation-fill-mode: forwards;
   }
   .swiper-slide-active .slide-wrapper8 .slide-content {
@@ -320,21 +380,29 @@
     }
   }
   @keyframes changeBgMob2 {
-    from {
+    0% {
       background-image: url(../../assets/mobile/slide2/slide2-mob-start-float.png),
         url(../../assets/mobile/slide2/slide2-mob-start.png);
     }
-    to {
+    20% {
+      background-image: url(../../assets/mobile/slide2/slide2-mob-start-float.png),
+        url(../../assets/mobile/slide2/slide2-mob-start.png);
+    }
+    100% {
       background-image: url(../../assets/mobile/slide2/slide2-mob-finish-float.png),
         url(../../assets/mobile/slide2/slide2-mob-finish.png);
     }
   }
   @keyframes changeBgMob3 {
-    from {
+    0% {
       background-image: url(../../assets/mobile/slide3/slide3-mob-start-float.png),
         url(../../assets/mobile/slide3/slide3-mob-start.png);
     }
-    to {
+    20% {
+      background-image: url(../../assets/mobile/slide3/slide3-mob-start-float.png),
+        url(../../assets/mobile/slide3/slide3-mob-start.png);
+    }
+    100% {
       background-image: url(../../assets/mobile/slide3/slide3-mob-finish-float.png),
         url(../../assets/mobile/slide3/slide3-mob-finish.png);
     }
