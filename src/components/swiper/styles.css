@@ -241,18 +241,30 @@
 .triangle:hover {
   background: url(../../assets/icons/Triangle-active.png) !important;
   opacity: 0.8 !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
 }
 .circle:hover {
   background: url(../../assets/icons/Circle-active.png) !important;
   opacity: 0.8 !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
 }
 .square:hover {
   background: url(../../assets/icons/Square-active.png) !important;
   opacity: 0.8 !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
 }
 .star:hover {
   background: url(../../assets/icons/Star-active.png) !important;
   opacity: 0.8 !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
 }
 .swiper-pagination-bullet-active[data-value="triangle"] {
   background: url(../../assets/icons/Triangle-active.png) !important;
