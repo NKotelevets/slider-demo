@@ -206,10 +206,10 @@ export function SwiperComponent() {
               <p>
                 Our clients range from countless start-ups
                 <br /> to widely known brands such as{" "}
-                <i>
+                <span className="italic-font">
                   The New York <br />
                   Times,
-                </i>{" "}
+                </span>{" "}
                 Apple and creative work by Annie Leibovitz.
               </p>
             </div>
@@ -228,7 +228,8 @@ export function SwiperComponent() {
               <p>
                 Our clients range from countless
                 <br /> start-ups to widely known brands
-                <br /> such as <i>The New York Times,</i> <br />
+                <br /> such as{" "}
+                <span className="italic-font">The New York Times,</span> <br />
                 Apple and creative work
                 <br /> by Annie Leibovitz.
               </p>

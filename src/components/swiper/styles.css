@@ -39,6 +39,9 @@
 .font-medium {
   font-family: AmericanTypewriterStdMed;
 }
+.italic-font {
+  font-family: AmericanTypewriterStdItalic;
+}
 .slide-text {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -120,7 +123,9 @@
 .swiper-slide-active .slide-wrapper8 .slide-content {
   width: 415px;
   height: 415px;
-  background-image: url(../../assets/web/slide8/slide8-logo.png);
+  background-image: url(../../assets/web/slide8/slide8-logo-1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* animation */
@@ -133,73 +138,58 @@
     background-image: url(../../assets/web/basic-bg.png);
   }
   50% {
-    background-image: url(../../assets/web/slide1/slide1-middle-float.png),
-      url(../../assets/web/basic-bg.png);
+    background-image: url(../../assets/web/slide1/slide1-middle.png);
   }
   100% {
-    background-image: url(../../assets/web/slide1/slide1-finish-float-again.png),
-      url(../../assets/web/slide1/slide1-finish-float.png),
-      url(../../assets/web/basic-bg.png);
+    background-image: url(../../assets/web/slide1/slide1-finish.png);
   }
 }
 @keyframes changeBg2 {
   from {
-    background-image: url(../../assets/web/slide2/slide2-start-float.png),
-      url(../../assets/web/slide2/slide2-start.png);
+    background-image: url(../../assets/web/slide2/slide2-start-all.png);
   }
   to {
-    background-image: url(../../assets/web/slide2/slide2-finish-float.png),
-      url(../../assets/web/slide2/slide2-finish.png);
+    background-image: url(../../assets/web/slide2/slide2-finish-all.png);
   }
 }
 @keyframes changeBg3 {
   from {
-    background-image: url(../../assets/web/slide3/slide3-start-float.png),
-      url(../../assets/web/slide3/slide3-start.png);
+    background-image: url(../../assets/web/slide3/slide3-start-all.png);
   }
   to {
-    background-image: url(../../assets/web/slide3/slide3-finish-float.png),
-      url(../../assets/web/slide3/slide3-finish.png);
+    background-image: url(../../assets/web/slide3/slide3-finish-all.png);
   }
 }
 @keyframes changeBg4 {
   from {
-    background-image: url(../../assets/web/slide4/slide4-start-float-04.png),
-      url(../../assets/web/slide4/slide4-start.png);
+    background-image: url(../../assets/web/slide4/slide4-start-all.png);
   }
   to {
-    background-image: url(../../assets/web/slide4/slide4-finish-float-04.png),
-      url(../../assets/web/slide4/slide4-finish.png);
+    background-image: url(../../assets/web/slide4/slide4-finish-all.png);
   }
 }
 @keyframes changeBg5 {
   from {
-    background-image: url(../../assets/web/slide5/slide5-start-float.png),
-      url(../../assets/web/slide5/slide5-start.png);
+    background-image: url(../../assets/web/slide5/slide5-start-all.png);
   }
   to {
-    background-image: url(../../assets/web/slide5/slide5-finish-float.png),
-      url(../../assets/web/slide5/slide5-finish.png);
+    background-image: url(../../assets/web/slide5/slide5-finish-all.png);
   }
 }
 @keyframes changeBg6 {
   from {
-    background-image: url(../../assets/web/slide6/slide6-start-float.png),
-      url(../../assets/web/slide6/slide6-start.png);
+    background-image: url(../../assets/web/slide6/slide6-start-all.png);
   }
   to {
-    background-image: url(../../assets/web/slide6/slide6-finish-float.png),
-      url(../../assets/web/slide6/slide6-finish.png);
+    background-image: url(../../assets/web/slide6/slide6-finish-all.png);
   }
 }
 @keyframes changeBg7 {
   from {
-    background-image: url(../../assets/web/slide7/slide7-start-float.png),
-      url(../../assets/web/basic-bg.png);
+    background-image: url(../../assets/web/slide7/slide7-start-all.png);
   }
   to {
-    background-image: url(../../assets/web/slide7/slide7-finish-float.png),
-      url(../../assets/web/basic-bg.png);
+    background-image: url(../../assets/web/slide7/slide7-finish-all.png);
   }
 }
 
@@ -210,6 +200,9 @@
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   bottom: 34px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .swiper-pagination-bullet {
   width: 12px !important;
@@ -239,9 +232,27 @@
 }
 .star {
   background: url(../../assets/icons/Star.png) !important;
+  width: 15px !important;
+  height: 15px !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: contain !important;
+}
+.triangle:hover {
+  background: url(../../assets/icons/Triangle-active.png) !important;
+  opacity: 0.8 !important;
+}
+.circle:hover {
+  background: url(../../assets/icons/Circle-active.png) !important;
+  opacity: 0.8 !important;
+}
+.square:hover {
+  background: url(../../assets/icons/Square-active.png) !important;
+  opacity: 0.8 !important;
+}
+.star:hover {
+  background: url(../../assets/icons/Star-active.png) !important;
+  opacity: 0.8 !important;
 }
 .swiper-pagination-bullet-active[data-value="triangle"] {
   background: url(../../assets/icons/Triangle-active.png) !important;
@@ -253,6 +264,8 @@
   background: url(../../assets/icons/Star-active.png) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  width: 15px !important;
+  height: 15px !important;
   background-size: contain !important;
 }
 .swiper-pagination-bullet-active[data-value="circle"] {
@@ -272,13 +285,23 @@
     width: 10px !important;
     height: 10px !important;
   }
+
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
     bottom: 20px !important;
   }
+  .star {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .swiper-pagination-bullet-active[data-value="star"] {
+    width: 12px !important;
+    height: 12px !important;
+  }
 }
+
 @media screen and (max-width: 768px) {
   .swiper-slide {
     background-image: url(../../assets/mobile/basic-mob-bg.png);
@@ -328,7 +351,7 @@
   }
 
   .swiper-slide-active .slide-wrapper1 {
-    animation: changeBgMob1 ease-in 2.25s;
+    animation: changeBgMob1 ease-in-out 2.25s;
     animation-delay: 0.25s;
     animation-fill-mode: forwards;
   }
@@ -359,7 +382,9 @@
   .swiper-slide-active .slide-wrapper8 .slide-content {
     width: 215px;
     height: 215px;
-    background-image: url(../../assets/mobile/slide8/slide8-logo.png);
+    background-image: url(../../assets/mobile/slide8/slide8-logo@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   @keyframes changeBgMob1 {
@@ -370,81 +395,59 @@
       background-image: url(../../assets/mobile/basic-mob-bg.png);
     }
     70% {
-      background-image: url(../../assets/mobile/slide1/slide1-float.png),
-        url(../../assets/mobile/basic-mob-bg.png);
+      background-image: url(../../assets/mobile/slide1/slide1-middle-all.png);
     }
     100% {
-      background-image: url(../../assets/mobile/slide1/slide1-finish-float-again.png),
-        url(../../assets/mobile/slide1/slide1-finish-float.png),
-        url(../../assets/mobile/basic-mob-bg.png);
+      background-image: url(../../assets/mobile/slide1/slide1-finish-all.png);
     }
   }
   @keyframes changeBgMob2 {
-    0% {
-      background-image: url(../../assets/mobile/slide2/slide2-mob-start-float.png),
-        url(../../assets/mobile/slide2/slide2-mob-start.png);
+    from {
+      background-image: url(../../assets/mobile/slide2/slide2-mob-start-all.png);
     }
-    20% {
-      background-image: url(../../assets/mobile/slide2/slide2-mob-start-float.png),
-        url(../../assets/mobile/slide2/slide2-mob-start.png);
-    }
-    100% {
-      background-image: url(../../assets/mobile/slide2/slide2-mob-finish-float.png),
-        url(../../assets/mobile/slide2/slide2-mob-finish.png);
+    to {
+      background-image: url(../../assets/mobile/slide2/slide2-mob-finish-all.png);
     }
   }
   @keyframes changeBgMob3 {
-    0% {
-      background-image: url(../../assets/mobile/slide3/slide3-mob-start-float.png),
-        url(../../assets/mobile/slide3/slide3-mob-start.png);
+    from {
+      background-image: url(../../assets/mobile/slide3/slide3-mob-start-all.png);
     }
-    20% {
-      background-image: url(../../assets/mobile/slide3/slide3-mob-start-float.png),
-        url(../../assets/mobile/slide3/slide3-mob-start.png);
-    }
-    100% {
-      background-image: url(../../assets/mobile/slide3/slide3-mob-finish-float.png),
-        url(../../assets/mobile/slide3/slide3-mob-finish.png);
+
+    to {
+      background-image: url(../../assets/mobile/slide3/slide3-mob-finish-all.png);
     }
   }
   @keyframes changeBgMob4 {
     from {
-      background-image: url(../../assets/mobile/slide4/slide4-mob-start-float.png),
-        url(../../assets/mobile/slide4/slide4-mob-start.png);
+      background-image: url(../../assets/mobile/slide4/slide4-mob-start-all.png);
     }
     to {
-      background-image: url(../../assets/mobile/slide4/slide4-mob-finish-float.png),
-        url(../../assets/mobile/slide4/slide4-mob-finish.png);
+      background-image: url(../../assets/mobile/slide4/slide4-mob-finish-all.png);
     }
   }
   @keyframes changeBgMob5 {
     from {
-      background-image: url(../../assets/mobile/slide5/slide5-mob-start-float.png),
-        url(../../assets/mobile/slide5/slide5-mob-start.png);
+      background-image: url(../../assets/mobile/slide5/slide5-mob-start-all.png);
     }
     to {
-      background-image: url(../../assets/mobile/slide5/slide5-mob-finish-float.png),
-        url(../../assets/mobile/slide5/slide5-mob-finish.png);
+      background-image: url(../../assets/mobile/slide5/slide5-mob-finish-all.png);
     }
   }
   @keyframes changeBgMob6 {
     from {
-      background-image: url(../../assets/mobile/slide6/slide6-mob-start-float.png),
-        url(../../assets/mobile/slide6/slide6-mob-start.png);
+      background-image: url(../../assets/mobile/slide6/slide6-mob-start-all.png);
     }
     to {
-      background-image: url(../../assets/mobile/slide6/slide6-mob-finish-float.png),
-        url(../../assets/mobile/slide6/slide6-mob-finish.png);
+      background-image: url(../../assets/mobile/slide6/slide6-mob-finish-all.png);
     }
   }
   @keyframes changeBgMob7 {
     from {
-      background-image: url(../../assets/mobile/slide7/slide7-mob-start-float.png),
-        url(../../assets/mobile/basic-mob-bg.png);
+      background-image: url(../../assets/mobile/slide7/slide7-mob-start-float.png);
     }
     to {
-      background-image: url(../../assets/mobile/slide7/slide7-mob-finish-float.png),
-        url(../../assets/mobile/basic-mob-bg.png);
+      background-image: url(../../assets/mobile/slide7/slide7-mob-finish-float.png);
     }
   }
 }

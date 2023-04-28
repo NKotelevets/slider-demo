@@ -43,13 +43,21 @@ strong {
 
 @font-face {
   font-family: AmericanTypewriterStdLight;
-  src: url(../src/assets/fonts/AmericanTypewriterStd-Light.ttf)
-    format("truetype");
+  src: url(../src/assets/fonts/itc-american-typewriter-std-light.otf)
+    format("opentype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: AmericanTypewriterStdMed;
-  src: url(../src/assets/fonts/AmericanTypewriterStd-Med.ttf) format("truetype");
+  src: url(../src/assets/fonts/itc-american-typewriter-std-medium.otf)
+    format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: AmericanTypewriterStdItalic;
+  src: url(../src/assets/fonts/itc-american-typewriter-std-light-italic.otf)
+    format("opentype");
   font-weight: 400;
 }
