@@ -7,6 +7,7 @@ import "swiper/css/effect-fade";
 import icon1 from "../../assets/web/tr-1.png";
 import icon2 from "../../assets/web/tr-2.png";
 import icon3 from "../../assets/web/tr-3.png";
+
 export function SwiperComponent() {
   const defineAdditionalClassName = (index) => {
     if (index == 0 || index == 4) {
@@ -50,9 +51,12 @@ export function SwiperComponent() {
         effect={"fade"}
         loop={true}
         modules={[Pagination, EffectFade, Keyboard, Mousewheel]}
+        speed="600"
       >
         <SwiperSlide className="swiper-slide slide1">
           <div className="slide-wrapper1">
+            <div className="slide1-bg-middle slide-bg"></div>
+            <div className="slide1-bg-finish slide-bg"></div>
             <div className="slide-content">
               <p className="slide-title">Hello.</p>
               <div className="text-wrapper">
@@ -73,7 +77,7 @@ export function SwiperComponent() {
         </SwiperSlide>
         <SwiperSlide className="swiper-slide slide2">
           <div className="slide-wrapper2">
-            {" "}
+            <div className="slide2-bg-finish slide-bg"></div>{" "}
             <div className="slide-content show-for-web">
               <p>
                 {" "}
@@ -110,6 +114,7 @@ export function SwiperComponent() {
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
           <div className="slide-wrapper3">
+            <div className="slide3-bg-finish slide-bg"></div>
             <div className="slide-content ">
               {" "}
               <div className="slide-content-slide3">
@@ -143,6 +148,7 @@ export function SwiperComponent() {
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
           <div className="slide-wrapper4">
+            <div className="slide4-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
               <p>Publishing House.</p>
               <p>
@@ -188,7 +194,7 @@ export function SwiperComponent() {
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
           <div className="slide-wrapper5">
-            {" "}
+            <div className="slide5-bg-finish slide-bg"></div>{" "}
             <div className="slide-content show-for-web">
               <p>Value Engine.</p>
               <p>
@@ -238,6 +244,7 @@ export function SwiperComponent() {
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
           <div className="slide-wrapper6">
+            <div className="slide6-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
               <p>Community.</p>
               <p>
@@ -278,6 +285,7 @@ export function SwiperComponent() {
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
           <div className="slide-wrapper7">
+            <div className="slide7-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
               <p>
                 Working with LeftFront is{" "}
