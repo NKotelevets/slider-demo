@@ -131,15 +131,15 @@
   animation: changeBg ease-in 1s;
   -webkit-animation: changeBg ease-in 1s;
   animation-fill-mode: forwards;
-  animation-delay: 0.25s;
-  -webkit-animation-delay: 0.25s;
+  animation-delay: 1.25s;
+  -webkit-animation-delay: 1.25s;
 }
 .swiper-slide-active .slide-wrapper1 .slide1-bg-finish {
   animation: changeBg ease-in-out 1s;
   -webkit-animation: changeBg ease-in-out 1s;
   animation-fill-mode: forwards;
-  animation-delay: 1.25s;
-  -webkit-animation-delay: 1.25s;
+  animation-delay: 2.25s;
+  -webkit-animation-delay: 2.25s;
 }
 
 .swiper-slide-active .slide-wrapper2 {
@@ -183,8 +183,8 @@
   animation: changeBg ease-out 2s;
   -webkit-animation: changeBg ease-out 2s;
   animation-fill-mode: forwards;
-  animation-delay: 0.25s;
-  -webkit-animation-delay: 0.25s;
+  animation-delay: 1.25s;
+  -webkit-animation-delay: 1.25s;
 }
 
 @keyframes changeBg {
@@ -316,7 +316,7 @@
     height: 12px !important;
   }
 }
-@media screen and (max-width: 927px) and (orientation: landscape),
+@media screen and (max-width: 927px) and (max-height: 430px) and (orientation: landscape),
   screen and (max-width: 768px) {
   .swiper-slide {
     background-image: url(../../assets/mobile/basic-mob-bg.png);
@@ -393,15 +393,15 @@
     animation: changeBg ease-in 1s;
     -webkit-animation: changeBg ease-in 1s;
     animation-fill-mode: forwards;
-    animation-delay: 0.25s;
-    -webkit-animation-delay: 0.25s;
+    animation-delay: 1.25s;
+    -webkit-animation-delay: 1.25s;
   }
   .swiper-slide-active .slide-wrapper1 .slide1-bg-finish {
     animation: changeBg ease-in-out 1s;
     -webkit-animation: changeBg ease-in-out 1s;
     animation-fill-mode: forwards;
-    animation-delay: 1.25s;
-    -webkit-animation-delay: 1.25s;
+    animation-delay: 2.25s;
+    -webkit-animation-delay: 2.25s;
   }
 
   .swiper-slide-active .slide-wrapper2 {
@@ -437,8 +437,8 @@
     animation: changeBg ease-out 2s;
     -webkit-animation: changeBg ease-out 2s;
     animation-fill-mode: forwards;
-    animation-delay: 0.25s;
-    -webkit-animation-delay: 0.25s;
+    animation-delay: 1.25s;
+    -webkit-animation-delay: 1.25s;
   }
 
   @keyframes changeBg {
@@ -450,7 +450,7 @@
     }
   }
 }
-@media screen and (max-width: 927px) and (orientation: landscape) {
+@media screen and (max-width: 927px) and (max-height: 430px) and (orientation: landscape) {
   #root {
     transform: rotate(-90deg);
     transform-origin: left top;
