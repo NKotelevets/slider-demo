@@ -36,28 +36,28 @@ strong {
   font-weight: 900;
 }
 @font-face {
-  font-family: AmericanTypewriterLight;
-  src: url(../src/assets/fonts/AmericanTypewriterLight.ttf) format("truetype");
+  font-family: ITCAmericanTypewriterProLight;
+  src: url(../src/assets/fonts/ITCAmericanTypewriterProLight/font.woff)
+      format("woff"),
+    url(../src/assets/fonts/ITCAmericanTypewriterProLight/font.woff2)
+      format("woff2");
   font-weight: 300;
 }
 
 @font-face {
-  font-family: AmericanTypewriterStdLight;
-  src: url(../src/assets/fonts/itc-american-typewriter-std-light.otf)
-    format("opentype");
-  font-weight: 400;
+  font-family: ITCAmericanTypewriterProMedium;
+  src: url(../src/assets/fonts/ITCAmericanTypewriterProMedium/font.woff)
+      format("woff"),
+    url(../src/assets/fonts/ITCAmericanTypewriterProMedium/font.woff2)
+      format("woff2");
+  font-weight: 300;
 }
 
 @font-face {
-  font-family: AmericanTypewriterStdMed;
-  src: url(../src/assets/fonts/itc-american-typewriter-std-medium.otf)
-    format("opentype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: AmericanTypewriterStdItalic;
-  src: url(../src/assets/fonts/itc-american-typewriter-std-light-italic.otf)
-    format("opentype");
-  font-weight: 400;
+  font-family: ITCAmericanTypewriterProLightItalic;
+  src: url(../src/assets/fonts/ITCAmericanTypewriterProLightItalic/font.woff)
+      format("woff"),
+    url(../src/assets/fonts/ITCAmericanTypewriterProLightItalic/font.woff2)
+      format("woff2");
+  font-weight: 300;
 }
