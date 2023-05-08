@@ -25,22 +25,22 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
-  font-family: AmericanTypewriterStdLight;
-  font-size: 16px;
-  line-height: 30px;
+  font-family: ITCAmericanTypewriterProLight;
+  font-size: 18px;
+  line-height: 32px;
   color: #170306;
 }
 .slide-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 20px;
 }
 .font-medium {
-  font-family: AmericanTypewriterStdMed;
+  font-family: ITCAmericanTypewriterProMedium;
 }
 .italic-font {
-  font-family: AmericanTypewriterStdItalic;
+  font-family: ITCAmericanTypewriterProLightItalic;
 }
 .slide-text {
   margin-top: 0px;
@@ -103,8 +103,6 @@
   background-repeat: no-repeat;
 }
 
-/* animation-delay = 0.25 + 0.6 (time of transition  slide) */
-
 .slide1-bg-middle {
   background-image: url(../../assets/web/slide1/slide1-middle.png);
 }
@@ -133,13 +131,15 @@
   animation: changeBg ease-in 1s;
   -webkit-animation: changeBg ease-in 1s;
   animation-fill-mode: forwards;
-  animation-delay: 0.85s;
+  animation-delay: 0.25s;
+  -webkit-animation-delay: 0.25s;
 }
 .swiper-slide-active .slide-wrapper1 .slide1-bg-finish {
   animation: changeBg ease-in-out 1s;
   -webkit-animation: changeBg ease-in-out 1s;
   animation-fill-mode: forwards;
-  animation-delay: 1.85s;
+  animation-delay: 1.25s;
+  -webkit-animation-delay: 1.25s;
 }
 
 .swiper-slide-active .slide-wrapper2 {
@@ -183,8 +183,8 @@
   animation: changeBg ease-out 2s;
   -webkit-animation: changeBg ease-out 2s;
   animation-fill-mode: forwards;
-  animation-delay: 0.85s;
-  -webkit-animation-delay: 0.85s;
+  animation-delay: 0.25s;
+  -webkit-animation-delay: 0.25s;
 }
 
 @keyframes changeBg {
@@ -316,7 +316,7 @@
     height: 12px !important;
   }
 }
-@media screen and (max-width: 920px) and (orientation: landscape),
+@media screen and (max-width: 927px) and (orientation: landscape),
   screen and (max-width: 768px) {
   .swiper-slide {
     background-image: url(../../assets/mobile/basic-mob-bg.png);
@@ -393,13 +393,15 @@
     animation: changeBg ease-in 1s;
     -webkit-animation: changeBg ease-in 1s;
     animation-fill-mode: forwards;
-    animation-delay: 0.85s;
+    animation-delay: 0.25s;
+    -webkit-animation-delay: 0.25s;
   }
   .swiper-slide-active .slide-wrapper1 .slide1-bg-finish {
     animation: changeBg ease-in-out 1s;
     -webkit-animation: changeBg ease-in-out 1s;
     animation-fill-mode: forwards;
-    animation-delay: 1.85s;
+    animation-delay: 1.25s;
+    -webkit-animation-delay: 1.25s;
   }
 
   .swiper-slide-active .slide-wrapper2 {
@@ -435,8 +437,8 @@
     animation: changeBg ease-out 2s;
     -webkit-animation: changeBg ease-out 2s;
     animation-fill-mode: forwards;
-    animation-delay: 0.85s;
-    -webkit-animation-delay: 0.85s;
+    animation-delay: 0.25s;
+    -webkit-animation-delay: 0.25s;
   }
 
   @keyframes changeBg {
@@ -448,7 +450,7 @@
     }
   }
 }
-@media screen and (max-width: 920px) and (orientation: landscape) {
+@media screen and (max-width: 927px) and (orientation: landscape) {
   #root {
     transform: rotate(-90deg);
     transform-origin: left top;

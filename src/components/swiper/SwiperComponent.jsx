@@ -51,7 +51,7 @@ export function SwiperComponent() {
         effect={"fade"}
         loop={true}
         modules={[Pagination, EffectFade, Keyboard, Mousewheel]}
-        speed="600"
+        speed="1000"
       >
         <SwiperSlide className="swiper-slide slide1">
           <div className="slide-wrapper1">
