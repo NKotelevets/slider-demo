@@ -45,6 +45,7 @@ export function SwiperComponent() {
         keyboard={{
           enabled: true,
         }}
+        centeredSlides={true}
         mousewheel={true}
         slidesPerView={1}
         className="mySwiper"
