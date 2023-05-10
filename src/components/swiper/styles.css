@@ -60,7 +60,7 @@
   height: 148px;
 }
 .slide-content img {
-  width: 40px;
+  width: 28px;
   height: auto;
   margin: 0 auto;
 }
@@ -71,7 +71,15 @@
 .slide3-description {
   max-width: 200px;
 }
-
+.slide-content-slide3-web {
+  display: flex;
+  flex-direction: column;
+}
+.slide-content-slide3-web .slide3-info,
+.slide-content-slide3-web .slide3-icon-wrapper,
+.slide-content-slide3-web .slide3-icon-wrapper img {
+  margin-bottom: 7px;
+}
 .swiper-slide-active .slide-wrapper1,
 .swiper-slide-active .slide-wrapper2,
 .swiper-slide-active .slide-wrapper3,
@@ -346,6 +354,10 @@
 }
 @media screen and (max-width: 927px) and (max-height: 430px) and (orientation: landscape),
   screen and (max-width: 1024px) and (orientation: portrait) {
+  .wrapper-mob {
+    height: 100vh;
+    overflow: hidden;
+  }
   .swiper-slide {
     background-image: url(../../assets/mobile/basic-mob-bg.png);
     background-size: cover;
@@ -355,12 +367,14 @@
   .slide-content {
     max-width: 350px;
   }
+
   .slide3-icon-wrapper {
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: 5px;
   }
+
   .slide-content img {
     width: 20px;
     height: 20px;
@@ -506,5 +520,8 @@
     position: absolute;
     top: 100%;
     left: 0;
+  }
+  .wrapper-mob {
+    height: 100%;
   }
 }

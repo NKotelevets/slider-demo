@@ -1,6 +1,12 @@
 import "./styles.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, EffectFade, Keyboard, Mousewheel } from "swiper";
+import {
+  Pagination,
+  EffectFade,
+  Keyboard,
+  Mousewheel,
+  Navigation,
+} from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
@@ -39,22 +45,24 @@ export function SwiperComponent() {
     },
   };
   return (
-    <div className="wrapper">
+    <div className="wrapper wrapper-mob">
       <Swiper
         pagination={pagination}
+        navigation={{
+          nextEl: ".next",
+        }}
         keyboard={{
           enabled: true,
         }}
-        centeredSlides={true}
         mousewheel={true}
         slidesPerView={1}
         className="mySwiper"
         effect={"fade"}
         loop={true}
-        modules={[Pagination, EffectFade, Keyboard, Mousewheel]}
+        modules={[Pagination, EffectFade, Keyboard, Mousewheel, Navigation]}
         speed="1000"
       >
-        <SwiperSlide className="swiper-slide slide1">
+        <SwiperSlide className="swiper-slide slide1 next">
           <div className="slide-wrapper1">
             <div className="slide1-bg-middle slide-bg"></div>
             <div className="slide1-bg-finish slide-bg"></div>
@@ -76,7 +84,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide slide2">
+        <SwiperSlide className="swiper-slide slide2 next">
           <div className="slide-wrapper2">
             <div className="slide2-bg-finish slide-bg"></div>{" "}
             <div className="slide-content show-for-web">
@@ -113,15 +121,15 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className="swiper-slide next">
           <div className="slide-wrapper3">
             <div className="slide3-bg-finish slide-bg"></div>
-            <div className="slide-content ">
+            <div className="slide-content show-for-web">
               {" "}
-              <div className="slide-content-slide3">
-                <span>We are</span>
+              <div className="slide-content-slide3 slide-content-slide3-web">
+                <span className="slide3-info">We are</span>
                 <div className="slide3-info-wrapper">
-                  <div className="slide3-icon-wrapper">
+                  <div className="slide3-icon-wrapper ">
                     <img src={icon1} alt="Visual element!" />
                     <span>publishing house</span>
                   </div>
@@ -135,11 +143,31 @@ export function SwiperComponent() {
                   </div>
                 </div>
               </div>
-              <p className="slide3-description show-for-web">
+              <p className="slide3-description">
                 Undertaking all 3 <br />
                 makes us better <br />
                 at each one of them.
               </p>
+            </div>
+            <div className="slide-content show-for-mob">
+              {" "}
+              <div className="slide-content-slide3">
+                <span>We are</span>
+                <div className="slide3-info-wrapper">
+                  <div className="slide3-icon-wrapper ">
+                    <img src={icon1} alt="Visual element!" />
+                    <span>publishing house</span>
+                  </div>
+                  <div className="slide3-icon-wrapper">
+                    <img src={icon2} alt="Visual element!" />
+                    <span>value engine</span>
+                  </div>
+                  <div className="slide3-icon-wrapper">
+                    <img src={icon3} alt="Visual element!" />
+                    <span>community.</span>
+                  </div>
+                </div>
+              </div>
               <p className="slide3-description show-for-mob">
                 Undertaking all 3 makes us better <br />
                 at each one of them.
@@ -147,7 +175,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className="swiper-slide next">
           <div className="slide-wrapper4">
             <div className="slide4-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
@@ -193,7 +221,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className="swiper-slide next">
           <div className="slide-wrapper5">
             <div className="slide5-bg-finish slide-bg"></div>{" "}
             <div className="slide-content show-for-web">
@@ -243,7 +271,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className="swiper-slide next">
           <div className="slide-wrapper6">
             <div className="slide6-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
@@ -284,7 +312,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className="swiper-slide next">
           <div className="slide-wrapper7">
             <div className="slide7-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
@@ -318,7 +346,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className="swiper-slide next">
           <div className="slide-wrapper8">
             <div className="slide-content"></div>
           </div>
