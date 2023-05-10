@@ -354,9 +354,6 @@
 }
 @media screen and (max-width: 927px) and (max-height: 430px) and (orientation: landscape),
   screen and (max-width: 1024px) and (orientation: portrait) {
-  body {
-    overflow-y: hidden;
-  }
   .wrapper-mob {
     height: 100vh;
     overflow: hidden;
