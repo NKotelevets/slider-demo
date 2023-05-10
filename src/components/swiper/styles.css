@@ -354,6 +354,17 @@
 }
 @media screen and (max-width: 927px) and (max-height: 430px) and (orientation: landscape),
   screen and (max-width: 1024px) and (orientation: portrait) {
+  body {
+    min-height: 100vh;
+    min-height: fill-available;
+    min-height: -webkit-fill-available;
+    overflow-y: hidden;
+  }
+  html {
+    height: fill-available;
+    height: -webkit-fill-available;
+    overflow-y: hidden;
+  }
   .wrapper-mob {
     height: 100vh;
     overflow: hidden;
@@ -363,7 +374,24 @@
     background-size: cover;
     font-size: 12px;
     line-height: 20px;
+    overflow-y: hidden;
   }
+  .slide-wrapper1,
+  .slide-wrapper2,
+  .slide-wrapper3,
+  .slide-wrapper4,
+  .slide-wrapper5,
+  .slide-wrapper6,
+  .slide-wrapper7 {
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    overflow-y: hidden;
+  }
+
   .slide-content {
     max-width: 350px;
   }
