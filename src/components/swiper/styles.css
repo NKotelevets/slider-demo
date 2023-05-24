@@ -309,6 +309,27 @@
   background-size: contain !important;
 }
 
+@media (width: 1920) {
+  .slide-bg{
+    background-size: 100% auto;
+  }
+
+  .swiper-slide {
+    background-size: 100% auto;
+  }
+
+  .swiper-slide-active .slide-wrapper1,
+  .swiper-slide-active .slide-wrapper2,
+  .swiper-slide-active .slide-wrapper3,
+  .swiper-slide-active .slide-wrapper4,
+  .swiper-slide-active .slide-wrapper5,
+  .swiper-slide-active .slide-wrapper6,
+  .swiper-slide-active .slide-wrapper7,
+  .swiper-slide-active .slide-wrapper8 {
+    background-size: 100% auto;
+  }
+}
+
 @media screen and (max-width: 1700px) {
   .swiper-slide-active .slide-wrapper8 .slide-content {
     width: 350px;
