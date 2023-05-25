@@ -96,7 +96,7 @@
   justify-content: center;
   align-items: center;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .slide-bg {
@@ -108,7 +108,7 @@
   justify-content: center;
   align-items: center;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -438,6 +438,15 @@
   .slide7-bg-finish {
     background-image: url(../../assets/web/1440/slide7/slide7-finish-all.jpg);
   }
+
+  .swiper-slide {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.36px
+  }
+  .slide-title {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 1366px) {
@@ -497,6 +506,14 @@
   .slide7-bg-finish {
     background-image: url(../../assets/web/1366x1024/slide7/slide7-finish-all.jpg);
   }
+  .swiper-slide {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.5px
+  }
+  .slide-title {
+    font-size: 18px;
+  }
 }
 
 @media (width: 1366px  ) and (height: 768px) {
@@ -521,6 +538,15 @@
 
   .slide-bg {
     background-size: 117% auto;
+  }
+
+  .swiper-slide {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.36px
+  }
+  .slide-title {
+    font-size: 15px;
   }
 }
 
@@ -604,9 +630,21 @@
   .slide-bg {
     background-size: 110% auto;
   }
+
+  .swiper-slide {
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.31px
+  }
+  .slide-title {
+    font-size: 14px;
+  }
+  .slide-content p {
+    margin-bottom: 22px
+  }
 }
 
-@media (width: 1024px  ) {
+@media (width: 1024px) {
   .slide-bg{
     background-size: 116% auto;
   }
@@ -624,6 +662,14 @@
   .swiper-slide-active .slide-wrapper7,
   .swiper-slide-active .slide-wrapper8 {
     background-size: 116% auto;
+  }
+  .swiper-slide {
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.31px
+  }
+  .slide-title {
+    font-size: 14px;
   }
 }
 
@@ -811,7 +857,7 @@
 }
 
 @media (max-width: 412px) {
-  .slide-bg{
+  /* .slide-bg{
     background-size: 138% auto;
   }
 
@@ -828,5 +874,17 @@
   .swiper-slide-active .slide-wrapper7,
   .swiper-slide-active .slide-wrapper8 {
     background-size: 138% auto;
+  } */
+
+  .swiper-slide {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.36px
   }
+  .slide-title {
+    font-size: 14px;
+  }
+  .slide-content p {
+    margin-bottom: 15px;
+}
 }
