@@ -901,12 +901,12 @@
 
 @media screen and (max-width: 927px) {
 body, #root, .wrapper-mob  {
-    position: absolute!important;
+    /* position: absolute!important;
   top: 0!important;
   bottom: 0!important;
   left: 0!important;
-  right: 0!important;
-  height: auto!important
+  right: 0!important; */
+  height: 100dvh!important
   }
 }
 
