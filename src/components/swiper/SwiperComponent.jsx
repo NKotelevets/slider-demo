@@ -62,14 +62,14 @@ export function SwiperComponent() {
         modules={[Pagination, EffectFade, Keyboard, Mousewheel, Navigation]}
         speed="1000"
       >
-        <SwiperSlide className="swiper-slide slide1 next">
+        <SwiperSlide className="swiper-slide slide1">
           <div className="slide-wrapper1">
             <div className="slide1-bg-middle slide-bg"></div>
             <div className="slide1-bg-finish slide-bg"></div>
             <div className="slide-content">
               <p className="slide-title">Hello.</p>
               <div className="text-wrapper">
-                <p className="slide-text">
+                <p className="slide-text first-slide-text">
                   {" "}
                   LeftFront is a{" "}
                   <span className="font-medium">societal accelerator.</span>
@@ -84,7 +84,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide slide2 next">
+        <SwiperSlide className="swiper-slide slide2">
           <div className="slide-wrapper2">
             <div className="slide2-bg-finish slide-bg"></div>{" "}
             <div className="slide-content show-for-web">
@@ -121,7 +121,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide next">
+        <SwiperSlide className="swiper-slide">
           <div className="slide-wrapper3">
             <div className="slide3-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
@@ -175,7 +175,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide next">
+        <SwiperSlide className="swiper-slide">
           <div className="slide-wrapper4">
             <div className="slide4-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
@@ -221,7 +221,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide next">
+        <SwiperSlide className="swiper-slide">
           <div className="slide-wrapper5">
             <div className="slide5-bg-finish slide-bg"></div>{" "}
             <div className="slide-content show-for-web">
@@ -271,7 +271,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide next">
+        <SwiperSlide className="swiper-slide">
           <div className="slide-wrapper6">
             <div className="slide6-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
@@ -312,7 +312,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide next">
+        <SwiperSlide className="swiper-slide">
           <div className="slide-wrapper7">
             <div className="slide7-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
@@ -346,7 +346,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide next">
+        <SwiperSlide className="swiper-slide">
           <div className="slide-wrapper8">
             <div className="slide-content"></div>
           </div>
