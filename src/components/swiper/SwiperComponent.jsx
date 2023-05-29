@@ -13,6 +13,7 @@ import "swiper/css/effect-fade";
 import icon1 from "../../assets/web/tr-1.png";
 import icon2 from "../../assets/web/tr-2.png";
 import icon3 from "../../assets/web/tr-3.png";
+import { isMobile } from 'react-device-detect';
 
 export function SwiperComponent() {
   const defineAdditionalClassName = (index) => {
@@ -28,6 +29,7 @@ export function SwiperComponent() {
       return "";
     }
   };
+
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
@@ -61,8 +63,9 @@ export function SwiperComponent() {
         loop={true}
         modules={[Pagination, EffectFade, Keyboard, Mousewheel, Navigation]}
         speed="1000"
+        allowTouchMove={isMobile ? true : false}
       >
-        <SwiperSlide className="swiper-slide slide1">
+        <SwiperSlide className={`swiper-slide slide1 ${isMobile && 'next'}`}>
           <div className="slide-wrapper1">
             <div className="slide1-bg-middle slide-bg"></div>
             <div className="slide1-bg-finish slide-bg"></div>
@@ -84,7 +87,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide slide2">
+        <SwiperSlide className={`swiper-slide slide2 ${isMobile && 'next'}`}>
           <div className="slide-wrapper2">
             <div className="slide2-bg-finish slide-bg"></div>{" "}
             <div className="slide-content show-for-web">
@@ -121,7 +124,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
           <div className="slide-wrapper3">
             <div className="slide3-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
@@ -175,7 +178,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
           <div className="slide-wrapper4">
             <div className="slide4-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
@@ -221,7 +224,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
           <div className="slide-wrapper5">
             <div className="slide5-bg-finish slide-bg"></div>{" "}
             <div className="slide-content show-for-web">
@@ -271,7 +274,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
           <div className="slide-wrapper6">
             <div className="slide6-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
@@ -312,7 +315,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
           <div className="slide-wrapper7">
             <div className="slide7-bg-finish slide-bg"></div>
             <div className="slide-content show-for-web">
@@ -346,7 +349,7 @@ export function SwiperComponent() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
+        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
           <div className="slide-wrapper8">
             <div className="slide-content"></div>
           </div>
