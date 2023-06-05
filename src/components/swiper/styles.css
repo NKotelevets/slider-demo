@@ -224,7 +224,8 @@
   width: 12px !important;
   height: 12px !important;
   border-radius: 0% !important;
-  margin-right: 10px !important;
+  margin-right: 7px !important;
+  margin-left: 7px !important;
   opacity: 1 !important;
 }
 
@@ -335,8 +336,8 @@
   }
 
   .swiper-pagination-bullet.star {
-    width: 14px !important;
-    height: 14px !important;
+    width: 12px !important;
+    height: 12px !important;
   }
 }
 
@@ -389,8 +390,8 @@
     height: 12px !important;
   }
   .swiper-pagination-bullet.star {
-    width: 14px !important;
-    height: 14px !important;
+    width: 12px !important;
+    height: 12px !important;
   }
 }
 
@@ -525,12 +526,12 @@
     background-image: url(../../assets/web/1366x1024/slide7/slide7-finish-all.jpg);
   }
   .swiper-slide {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 28px;
     letter-spacing: 0.5px
   }
   .slide-title {
-    font-size: 18px;
+    font-size: 15px;
   }
   .swiper-pagination-bullet {
     width: 12px !important;
@@ -674,8 +675,8 @@
   }
 
   .swiper-pagination-bullet.star {
-    width: 14px !important;
-    height: 14px !important;
+    width: 12px !important;
+    height: 12px !important;
   }
 }
 
@@ -711,15 +712,15 @@
     height: 10px !important;
   }
   .swiper-pagination-bullet.star {
-    width: 14px !important;
-    height: 14px !important;
+    width: 12px !important;
+    height: 12px !important;
   }
 }
 
 @media screen and (max-width: 927px) and (max-height: 430px) and (orientation: landscape),
   screen and (max-width: 1024px) and (orientation: portrait) {
   :root {
-    --unit-100vh: 100vh;
+    --unit-100vh: 100dvh;
   }
   @supports (height: 100dvh) {
     :root {
@@ -727,7 +728,7 @@
     }
   }
   .wrapper-mob {
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
   }
   .swiper-slide {
@@ -887,7 +888,7 @@
   #root {
     transform: rotate(-90deg);
     transform-origin: left top;
-    width: 100vh;
+    width: 100dvh;
     height: 100vw;
     overflow-x: hidden;
     position: absolute;
@@ -906,8 +907,8 @@ body, #root, .wrapper-mob  {
   bottom: 0!important;
   left: 0!important;
   right: 0!important; */
-  height: 100dvh!important;
-  min-height: 100dvh!important;
+    height: 100dvh!important;
+    min-height: 100dvh!important;
   }
 }
 
