@@ -717,6 +717,173 @@
   }
 }
 
+@media (max-width: 1080px) and (min-height: 2000px){
+  :root {
+    --unit-100vh: 100dvh;
+  }
+  @supports (height: 100dvh) {
+    :root {
+      --unit-100vh: 100dvh;
+    }
+  }
+  .wrapper-mob {
+    height: 100dvh;
+    overflow: hidden;
+  }
+  .swiper-slide {
+    background-image: url(../../assets/mobile/basic-mob-bg.png);
+    background-size: cover;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .slide-content {
+    max-width: 350px;
+  }
+
+  .slide3-icon-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .slide-content img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 15px;
+  }
+
+  .show-for-mob {
+    display: inline;
+  }
+  .show-for-web {
+    display: none;
+  }
+  .slide-content-slide3 {
+    display: flex;
+  }
+  .slide3-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .slide-wrapper1 .slide-content {
+    height: 94px;
+  }
+  .slide-title {
+    font-size: 14px;
+  }
+  .swiper-pagination {
+    display: none !important;
+  }
+
+  .slide1-bg-middle {
+    background-image: url(../../assets/mobile/slide1/slide1-middle-all.jpg);
+  }
+  .slide1-bg-finish {
+    background-image: url(../../assets/mobile/slide1/slide1-finish-all.jpg);
+  }
+  .slide2-bg-finish {
+    background-image: url(../../assets/mobile/slide2/slide2-mob-finish-all.png);
+  }
+  .slide3-bg-finish {
+    background-image: url(../../assets/mobile/slide3/slide3-mob-finish-all.png);
+  }
+  .slide4-bg-finish {
+    background-image: url(../../assets/mobile/slide4/slide4-mob-finish-all.png);
+  }
+  .slide5-bg-finish {
+    background-image: url(../../assets/mobile/slide5/slide5-mob-finish-all.png);
+  }
+  .slide6-bg-finish {
+    background-image: url(../../assets/mobile/slide6/slide6-mob-finish-all.png);
+  }
+  .slide7-bg-finish {
+    background-image: url(../../assets/mobile/slide7/slide7-mob-finish-float.png);
+  }
+  .swiper-slide-active .slide-wrapper1 .slide1-bg-middle {
+    animation: changeBg ease-in 1s;
+    -webkit-animation: changeBg ease-in 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.25s;
+    -webkit-animation-delay: 1.25s;
+  }
+  .swiper-slide-active .slide-wrapper1 .slide1-bg-finish {
+    animation: changeBg ease-in-out 1s;
+    -webkit-animation: changeBg ease-in-out 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.25s;
+    -webkit-animation-delay: 2.25s;
+  }
+
+  .swiper-slide-active .slide-wrapper2 {
+    background-image: url(../../assets/mobile/slide2/slide2-mob-start-all.png);
+  }
+
+  .swiper-slide-active .slide-wrapper3 {
+    background-image: url(../../assets/mobile/slide3/slide3-mob-start-all.png);
+  }
+
+  .swiper-slide-active .slide-wrapper4 {
+    background-image: url(../../assets/mobile/slide4/slide4-mob-start-all.png);
+  }
+
+  .swiper-slide-active .slide-wrapper5 {
+    background-image: url(../../assets/mobile/slide5/slide5-mob-start-all.png);
+  }
+
+  .swiper-slide-active .slide-wrapper6 {
+    background-image: url(../../assets/mobile/slide6/slide6-mob-start-all.png);
+  }
+
+  .swiper-slide-active .slide-wrapper7 {
+    background-image: url(../../assets/mobile/slide7/slide7-mob-start-float.png);
+  }
+  .swiper-slide-active .slide-wrapper8 .slide-content {
+    width: 210px;
+    height: 210px;
+  }
+  .swiper-slide-active .slide-wrapper1,
+  .swiper-slide-active .slide-wrapper2,
+  .swiper-slide-active .slide-wrapper3,
+  .swiper-slide-active .slide-wrapper4,
+  .swiper-slide-active .slide-wrapper5,
+  .swiper-slide-active .slide-wrapper6,
+  .swiper-slide-active .slide-wrapper7,
+  .swiper-slide-active .slide-wrapper8 {
+    background-size: cover;
+  }
+  .slide-bg {
+    background-size: cover;
+  }
+  .swiper-slide-active .slide-wrapper2 .slide2-bg-finish,
+  .swiper-slide-active .slide-wrapper3 .slide3-bg-finish,
+  .swiper-slide-active .slide-wrapper4 .slide4-bg-finish,
+  .swiper-slide-active .slide-wrapper5 .slide5-bg-finish,
+  .swiper-slide-active .slide-wrapper6 .slide6-bg-finish,
+  .swiper-slide-active .slide-wrapper7 .slide7-bg-finish {
+    animation: changeBg ease-out 2s;
+    -webkit-animation: changeBg ease-out 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.25s;
+    -webkit-animation-delay: 1.25s;
+  }
+
+  @keyframes changeBg {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 @media screen and (max-width: 927px) and (max-height: 430px) and (orientation: landscape),
   screen and (max-width: 1024px) and (orientation: portrait) {
   :root {
