@@ -913,12 +913,12 @@ body, #root, .wrapper-mob  {
 }
 
 @media (max-width: 412px) {
-  /* .slide-bg{
-    background-size: 138% auto;
+  .slide-bg{
+    /* background-size: 125% auto; */
   }
 
   .swiper-slide {
-    background-size: 138% auto;
+    /* background-size: 125% auto; */
   }
 
   .swiper-slide-active .slide-wrapper1,
@@ -929,8 +929,8 @@ body, #root, .wrapper-mob  {
   .swiper-slide-active .slide-wrapper6,
   .swiper-slide-active .slide-wrapper7,
   .swiper-slide-active .slide-wrapper8 {
-    background-size: 138% auto;
-  } */
+    /* background-size: 125% auto; */
+  }
 
   .swiper-slide {
     font-size: 12px;
