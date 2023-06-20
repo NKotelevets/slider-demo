@@ -957,22 +957,22 @@
     background-image: url(../../assets/mobile/slide1/slide1-finish-all.jpg);
   }
   .slide2-bg-finish {
-    background-image: url(../../assets/mobile/slide2/slide2-mob-finish-all.png);
+    background-image: url(../../assets/mobile/slide2/slide2-mob-finish-all.jpg);
   }
   .slide3-bg-finish {
-    background-image: url(../../assets/mobile/slide3/slide3-mob-finish-all.png);
+    background-image: url(../../assets/mobile/slide3/slide3-mob-finish-all.jpg);
   }
   .slide4-bg-finish {
-    background-image: url(../../assets/mobile/slide4/slide4-mob-finish-all.png);
+    background-image: url(../../assets/mobile/slide4/slide4-mob-finish-all.jpg);
   }
   .slide5-bg-finish {
-    background-image: url(../../assets/mobile/slide5/slide5-mob-finish-all.png);
+    background-image: url(../../assets/mobile/slide5/slide5-mob-finish-all.jpg);
   }
   .slide6-bg-finish {
-    background-image: url(../../assets/mobile/slide6/slide6-mob-finish-all.png);
+    background-image: url(../../assets/mobile/slide6/slide6-mob-finish-all.jpg);
   }
   .slide7-bg-finish {
-    background-image: url(../../assets/mobile/slide7/slide7-mob-finish-float.png);
+    background-image: url(../../assets/mobile/slide7/slide7-mob-finish-float.jpg);
   }
   .swiper-slide-active .slide-wrapper1 .slide1-bg-middle {
     animation: changeBg ease-in 1s;
@@ -990,27 +990,27 @@
   }
 
   .swiper-slide-active .slide-wrapper2 {
-    background-image: url(../../assets/mobile/slide2/slide2-mob-start-all.png);
+    background-image: url(../../assets/mobile/slide2/slide2-mob-start-all.jpg);
   }
 
   .swiper-slide-active .slide-wrapper3 {
-    background-image: url(../../assets/mobile/slide3/slide3-mob-start-all.png);
+    background-image: url(../../assets/mobile/slide3/slide3-mob-start-all.jpg);
   }
 
   .swiper-slide-active .slide-wrapper4 {
-    background-image: url(../../assets/mobile/slide4/slide4-mob-start-all.png);
+    background-image: url(../../assets/mobile/slide4/slide4-mob-start-all.jpg);
   }
 
   .swiper-slide-active .slide-wrapper5 {
-    background-image: url(../../assets/mobile/slide5/slide5-mob-start-all.png);
+    background-image: url(../../assets/mobile/slide5/slide5-mob-start-all.jpg);
   }
 
   .swiper-slide-active .slide-wrapper6 {
-    background-image: url(../../assets/mobile/slide6/slide6-mob-start-all.png);
+    background-image: url(../../assets/mobile/slide6/slide6-mob-start-all.jpg);
   }
 
   .swiper-slide-active .slide-wrapper7 {
-    background-image: url(../../assets/mobile/slide7/slide7-mob-start-float.png);
+    background-image: url(../../assets/mobile/slide7/slide7-mob-start-float.jpg);
   }
   .swiper-slide-active .slide-wrapper8 .slide-content {
     width: 210px;
@@ -1080,12 +1080,30 @@ body, #root, .wrapper-mob  {
 }
 
 @media (max-width: 412px) {
+  .swiper-slide {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.36px
+  }
+  .slide-title {
+    font-size: 14px;
+  }
+  /* .slide-content p {
+    margin-bottom: 15px;
+} */
+}
+
+.first-slide-text {
+  margin-bottom: 0px!important
+}
+
+@media (width: 375px) and  (height: 667px){
   .slide-bg{
-    /* background-size: 125% auto; */
+    background-size: 120% auto;
   }
 
   .swiper-slide {
-    /* background-size: 125% auto; */
+    background-size: 120% auto;
   }
 
   .swiper-slide-active .slide-wrapper1,
@@ -1096,22 +1114,28 @@ body, #root, .wrapper-mob  {
   .swiper-slide-active .slide-wrapper6,
   .swiper-slide-active .slide-wrapper7,
   .swiper-slide-active .slide-wrapper8 {
-    /* background-size: 125% auto; */
+    background-size: 120% auto;
   }
 
   .swiper-slide {
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: 0.36px
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: 0.33px
   }
   .slide-title {
-    font-size: 14px;
+    font-size: 13px;
   }
-  .slide-content p {
-    margin-bottom: 15px;
-}
 }
 
-.first-slide-text {
-  margin-bottom: 0px!important
+
+@media (width: 360px) and  (height: 780px){
+
+  .swiper-slide {
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: 0.33px
+  }
+  .slide-title {
+    font-size: 13px;
+  }
 }
