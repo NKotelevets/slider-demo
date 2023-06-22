@@ -669,6 +669,10 @@
   .slide-content p {
     margin-bottom: 22px
   }
+
+  .slide-content p:last-child {
+    margin-bottom: 10px
+  }
   .swiper-pagination-bullet {
     width: 10px !important;
     height: 10px !important;
@@ -1076,6 +1080,25 @@ body, #root, .wrapper-mob  {
   right: 0!important; */
     height: 100dvh!important;
     min-height: 100dvh!important;
+  }
+
+  .slide-bg{
+    background-size: 125% auto;
+  }
+
+  .swiper-slide {
+    background-size: 125% auto;
+  }
+
+  .swiper-slide-active .slide-wrapper1,
+  .swiper-slide-active .slide-wrapper2,
+  .swiper-slide-active .slide-wrapper3,
+  .swiper-slide-active .slide-wrapper4,
+  .swiper-slide-active .slide-wrapper5,
+  .swiper-slide-active .slide-wrapper6,
+  .swiper-slide-active .slide-wrapper7,
+  .swiper-slide-active .slide-wrapper8 {
+    background-size: 125% auto;
   }
 }
 
