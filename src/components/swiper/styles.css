@@ -71,6 +71,7 @@
 }
 .slide3-description {
   max-width: 200px;
+  margin-bottom: 0px;
 }
 .slide-content-slide3-web {
   display: flex;
