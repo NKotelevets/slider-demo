@@ -1,3 +1,4 @@
+import {useEffect, useState, useLayoutEffect} from 'react'
 import "./styles.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -29,6 +30,32 @@ export function SwiperComponent() {
       return "";
     }
   };
+
+  function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  return size;
+}
+
+const [width, height] = useWindowSize();
+
+  useEffect(()=>{
+if (isMobile || height > width) {
+  var element = document.getElementById("root");
+  element.classList.remove("isWeb");
+} else if (!isMobile && height < width) {
+  var element = document.getElementById("root");
+  element.classList.add("isWeb");
+}
+
+},[isMobile, width, height])
 
   const pagination = {
     clickable: true,
