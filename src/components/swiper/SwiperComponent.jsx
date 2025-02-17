@@ -1,4 +1,4 @@
-import {useEffect, useState, useLayoutEffect} from 'react'
+import { useEffect, useState, useLayoutEffect } from "react";
 import "./styles.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -11,71 +11,155 @@ import {
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-import icon1 from "../../assets/web/tr-1.png";
-import icon2 from "../../assets/web/tr-2.png";
-import icon3 from "../../assets/web/tr-3.png";
-import { isMobile } from 'react-device-detect';
+import { isMobile } from "react-device-detect";
 
 export function SwiperComponent() {
-  const defineAdditionalClassName = (index) => {
-    if (index == 0 || index == 4) {
-      return "triangle";
+  const [activeSlide, setActiveSlide] = useState(new Set());
+  const defineAdditionalClassName = (index, withIndex) => {
+    if (index == 0 || index == 6) {
+      return withIndex ? `triangle_${index}` : "triangle";
+    } else if (index == 2 || index == 4) {
+      return withIndex ? `circle_${index}` : "circle";
+    } else if (index == 3) {
+      return withIndex ? `star_${index}` : "star";
     } else if (index == 1 || index == 5) {
-      return "circle";
-    } else if (index == 2 || index == 6) {
-      return "star";
-    } else if (index == 3 || index == 7) {
-      return "square";
+      return withIndex ? `square_${index}` : "square";
+    } else {
+      return "";
+    }
+  };
+
+  const definePaginationImage = (index) => {
+    if (index == 0 || index == 6) {
+      return `<svg
+          id="Page_7"
+          data-name="Page 7"
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+        >
+          <g id="Polygon_1" data-name="Polygon 1" fill="rgba(255,255,255,0.1)">
+            <path d="M6,0l6,12H0Z" stroke="none" />
+            <path
+              d="M 6 2.236069679260254 L 1.618035316467285 11 L 10.38196468353271 11 L 6 2.236069679260254 M 6 0 L 12 12 L 0 12 L 6 0 Z"
+              stroke="none"
+              fill="rgba(147,149,151,0.5)"
+            />
+          </g>
+        </svg>`;
+    } else if (index == 2 || index == 4) {
+      return `<svg
+          id="Page_5"
+          data-name="Page 5"
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+        >
+          <g
+            id="Dot_1"
+            data-name="Dot 1"
+            fill="rgba(255,255,255,0.1)"
+            stroke="rgba(147,149,151,0.5)"
+            stroke-width="1"
+          >
+            <circle cx="6" cy="6" r="6" stroke="none" />
+            <circle cx="6" cy="6" r="5.5" fill="none" />
+          </g>
+        </svg>`;
+    } else if (index == 3) {
+      return `<svg width="14.507" height="14.563" viewBox="0 0 14.507 14.563">
+          <g id="Page_4" data-name="Page 4" transform="translate(1.268 1.367)">
+            <path
+              id="Path_31"
+              data-name="Path 31"
+              d="M505.46,1539.69l1.635-4.444,1.859,4.444h4.158l-3.076,2.966,1.31,4.59-4.251-2.822-4.036,2.822,1.229-4.59-3.176-2.966Z"
+              transform="translate(-501.113 -1535.246)"
+              fill="rgba(255,255,255,0.1)"
+              stroke="rgba(147,149,151,0.5)"
+              stroke-width="1"
+            />
+          </g>
+        </svg>`;
+    } else if (index == 1 || index == 5) {
+      return `
+        <svg
+          id="Page_6"
+          data-name="Page 6"
+          width="11"
+          height="11"
+          viewBox="0 0 11 11"
+        >
+          <g
+            id="Rectangle_2"
+            data-name="Rectangle 2"
+            fill="rgba(255,255,255,0.1)"
+            stroke="rgba(147,149,151,0.5)"
+            stroke-width="1"
+          >
+            <rect width="11" height="11" stroke="none" />
+            <rect x="0.5" y="0.5" width="10" height="10" fill="none" />
+          </g>
+        </svg>
+      `;
     } else {
       return "";
     }
   };
 
   function useWindowSize() {
-  const [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener("resize", updateSize);
+      updateSize();
+      return () => window.removeEventListener("resize", updateSize);
+    }, []);
+    return size;
+  }
+
+  const [width, height] = useWindowSize();
+
+  useEffect(() => {
+    if (isMobile || height > width) {
+      var element = document.getElementById("root");
+      element.classList.remove("isWeb");
+    } else if (!isMobile && height < width) {
+      var element = document.getElementById("root");
+      element.classList.add("isWeb");
     }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
-}
-
-const [width, height] = useWindowSize();
-
-  useEffect(()=>{
-if (isMobile || height > width) {
-  var element = document.getElementById("root");
-  element.classList.remove("isWeb");
-} else if (!isMobile && height < width) {
-  var element = document.getElementById("root");
-  element.classList.add("isWeb");
-}
-
-},[isMobile, width, height])
+  }, [isMobile, width, height]);
 
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
+      const test = definePaginationImage(index);
+      console.log(test);
       return (
         '<span class="' +
         className +
         " " +
-        defineAdditionalClassName(index) +
+        defineAdditionalClassName(index, false) +
         '" ' +
         'data-value="' +
-        defineAdditionalClassName(index) +
+        defineAdditionalClassName(index, true) +
         '">' +
+        test +
         "</span>"
       );
     },
   };
+
+  const handleSlideChange = (swiper) => {
+    !isMobile &&
+      setActiveSlide((prev) => new Set(prev).add(swiper.previousIndex));
+  };
+
   return (
     <div className="wrapper wrapper-mob">
       <Swiper
+        onSlideChange={handleSlideChange}
         pagination={pagination}
         navigation={{
           nextEl: ".next",
@@ -92,295 +176,263 @@ if (isMobile || height > width) {
         speed="1000"
         allowTouchMove={isMobile ? true : false}
       >
-        <SwiperSlide className={`swiper-slide slide1 ${isMobile && 'next'}`}>
+        {isMobile && (
+          <SwiperSlide className={`swiper-slide ${isMobile && "next"}`}>
+            <div className="slide-wrapper8">
+              <div className="slide-content"></div>
+            </div>
+          </SwiperSlide>
+        )}
+        <SwiperSlide className={`swiper-slide slide1 ${isMobile && "next"}`}>
           <div className="slide-wrapper1">
-            <div className="slide1-bg-middle slide-bg"></div>
-            <div className="slide1-bg-finish slide-bg"></div>
+            <div
+              className={`slide1-bg-1 slide-bg ${
+                activeSlide.has(0) && "no-animation"
+              }`}
+            ></div>
+            <div
+              className={`slide1-bg-2 slide-bg ${
+                activeSlide.has(0) && "no-animation"
+              }`}
+            ></div>
+            <div
+              className={`slide1-bg-3 slide-bg ${
+                activeSlide.has(0) && "no-animation"
+              }`}
+            ></div>
+            <div
+              className={`slide1-bg-4 slide-bg ${
+                activeSlide.has(0) && "no-animation"
+              }`}
+            ></div>
+
             <div className="slide-content">
-              <p className="slide-title">Hello.</p>
-              <div className="text-wrapper">
-                <p className="slide-text first-slide-text">
-                  {" "}
-                  LeftFront is a{" "}
-                  <span className="font-medium">societal accelerator.</span>
-                </p>
-                <p className="slide-text">
-                  We shape the future of our economy{" "}
-                  <span className="show-for-web">and</span>{" "}
-                  <span className="show-for-mob">+ </span>culture <br />
-                  in real time.
-                </p>
-              </div>
+              {!isMobile ? (
+                <div className="text-wrapper">
+                  <p className="slide-text first-slide-text">
+                    LeftFront is a group of expert executives. <br />
+                    pioneers, operators, academics, scientists + engineers.{" "}
+                    <br />
+                    artists + filmmakers, writers, designers, creators. <br />{" "}
+                    you may know us by our past work.
+                  </p>
+                  <p className="slide-text">
+                    our North Star is imagination. <br />
+                    because the genius in you stimulates the genius in us.
+                  </p>
+                </div>
+              ) : (
+                <div className="text-wrapper">
+                  <p className="slide-text first-slide-text">
+                    LeftFront is
+                    <br /> a group of expert executives.
+                    <br /> pioneers, operators, academics, <br />
+                    scientists + engineers.
+                    <br /> artists + filmmakers, writers,
+                    <br /> designers, creators.
+                  </p>
+                  <p className="slide-text">
+                    our North Star is imagination. <br />
+                    because the genius in you
+                    <br />
+                    stimulates the genius in us.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className={`swiper-slide slide2 ${isMobile && 'next'}`}>
+        <SwiperSlide className={`swiper-slide slide2 ${isMobile && "next"}`}>
           <div className="slide-wrapper2">
-            <div className="slide2-bg-finish slide-bg"></div>{" "}
-            <div className="slide-content show-for-web">
-              <p>
-                {" "}
-                Established by a group of expert executives with a <br />{" "}
-                remarkable record as pioneers, operators, creators,
-                <br /> artists and academics, LeftFront undertakes <br />{" "}
-                Daedalian problems with a rare level of proficiency,
-                <br /> integrity + efficacy.{" "}
-              </p>
-              <p>
-                {" "}
-                Our North Star is <span className="font-medium">resonance</span>
-                .<br /> Because the genius in you stimulates the genius in us.
-              </p>
-            </div>
-            <div className="slide-content show-for-mob">
-              <p>
-                {" "}
-                Established by a group of
-                <br /> expert executives <br />
-                with a remarkable record as pioneers,
-                <br /> operators, creators, artists and academics, <br />
-                LeftFront undertakes Daedalian
-                <br /> problems with a rare level of
-                <br /> proficiency, integrity + efficacy.
-              </p>
-              <p>
-                Our North Star is <span className="font-medium">resonance</span>
-                .<br /> Because the genius in you stimulates
-                <br /> the genius in us.
-              </p>
-            </div>
+            <div
+              className={`slide2-bg-1 slide-bg  ${
+                activeSlide.has(1) && "no-animation"
+              }`}
+            ></div>
+
+            {!isMobile ? (
+              <div className="slide-content show-for-web">
+                <p>
+                  we work on projects that change things. <br />
+                  mainly, these three:
+                  <br />
+                  revenue agents + independent studio + gathering place
+                </p>
+              </div>
+            ) : (
+              <div className="slide-content show-for-web">
+                <p>
+                  we work on <br />
+                  projects that change things. <br />
+                  mainly, these three:
+                </p>
+                <p>
+                  revenue agents
+                  <br /> + <br />
+                  independent studio
+                  <br /> +<br /> gathering place
+                </p>
+              </div>
+            )}
           </div>
         </SwiperSlide>
-        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
+        <SwiperSlide className={`swiper-slide ${isMobile && "next"}`}>
           <div className="slide-wrapper3">
-            <div className="slide3-bg-finish slide-bg"></div>
+            <div
+              className={`slide3-bg-1 slide-bg ${
+                activeSlide.has(2) && "no-animation"
+              }`}
+            ></div>
+            <div
+              className={`slide3-bg-2 slide-bg ${
+                activeSlide.has(2) && "no-animation"
+              }`}
+            ></div>
             <div className="slide-content show-for-web">
-              {" "}
               <div className="slide-content-slide3 slide-content-slide3-web">
-                <span className="slide3-info">We are</span>
-                <div className="slide3-info-wrapper">
-                  <div className="slide3-icon-wrapper ">
-                    <img src={icon1} alt="Visual element!" />
-                    <span>publishing house</span>
-                  </div>
-                  <div className="slide3-icon-wrapper">
-                    <img src={icon2} alt="Visual element!" />
-                    <span>value engine</span>
-                  </div>
-                  <div className="slide3-icon-wrapper">
-                    <img src={icon3} alt="Visual element!" />
-                    <span>community.</span>
-                  </div>
-                </div>
+                <p className="slide3-description">
+                  as revenue agents,
+                  <br /> we carry out <br />
+                  bespoke transformational
+                  <br />
+                  business assignments.
+                </p>
+                <p className="slide3-description">
+                  from countless start-ups, <br />
+                  to legacy enterprises
+                  <br /> such as The New York Times, <br />
+                  and iconic talent
+                  <br /> like Annie Leibovitz.
+                </p>
               </div>
-              <p className="slide3-description">
-                Undertaking all 3 <br />
-                makes us better <br />
-                at each one of them.
-              </p>
-            </div>
-            <div className="slide-content show-for-mob">
-              {" "}
-              <div className="slide-content-slide3">
-                <span>We are</span>
-                <div className="slide3-info-wrapper">
-                  <div className="slide3-icon-wrapper ">
-                    <img src={icon1} alt="Visual element!" />
-                    <span>publishing house</span>
-                  </div>
-                  <div className="slide3-icon-wrapper">
-                    <img src={icon2} alt="Visual element!" />
-                    <span>value engine</span>
-                  </div>
-                  <div className="slide3-icon-wrapper">
-                    <img src={icon3} alt="Visual element!" />
-                    <span>community.</span>
-                  </div>
-                </div>
-              </div>
-              <p className="slide3-description show-for-mob">
-                Undertaking all 3 makes us better <br />
-                at each one of them.
-              </p>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
+        <SwiperSlide className={`swiper-slide ${isMobile && "next"}`}>
           <div className="slide-wrapper4">
-            <div className="slide4-bg-finish slide-bg"></div>
+            <div
+              className={`slide4-bg-1 slide-bg ${
+                activeSlide.has(3) && "no-animation"
+              }`}
+            ></div>
+            <div
+              className={`slide4-bg-2 slide-bg ${
+                activeSlide.has(3) && "no-animation"
+              }`}
+            ></div>
+
             <div className="slide-content show-for-web">
-              <p>Publishing House.</p>
               <p>
-                With the help of creative minds around the globe,
-                <br /> we fund Insert Society Here (ISH).
+                we underwrite
+                <br /> insert society here.
               </p>
               <p>
-                A portal for authentic expression,
-                <br /> ISH broadcasts various forms of content <br /> created by
-                teens.
-                <br /> All teens, maneuvering and understanding
-                <br /> their evolving world.
+                an independent studio <br />
+                that offers representation + capital
+                <br /> for young people <br />
+                to develop
+                <br /> their own ideas.
               </p>
-              <p>
-                <span className="font-medium">
-                  For, of, about, by… their generation.
-                </span>{" "}
-                <br />
-                Monologue. Dialogue. Campaign.
-              </p>
-            </div>
-            <div className="slide-content show-for-mob">
-              <p>Publishing House.</p>
-              <p>
-                With the help of creative minds
-                <br /> around the globe, we fund <br />
-                Insert Society Here (ISH).
-              </p>
-              <p>
-                A portal for authentic expression,
-                <br /> ISH broadcasts various forms of <br />
-                content <span className="font-medium">created by teens.</span>
-                <br /> All teens, maneuvering + understanding
-                <br /> their evolving world.
-              </p>
-              <p>
-                For, of, about, by… their generation.
-                <br />
-                Monologue. Dialogue. Campaign.
-              </p>
+              <p>monologue. dialogue. campaign.</p>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
+        <SwiperSlide className={`swiper-slide ${isMobile && "next"}`}>
           <div className="slide-wrapper5">
-            <div className="slide5-bg-finish slide-bg"></div>{" "}
+            <div
+              className={`slide5-bg-1 slide-bg ${
+                activeSlide.has(4) && "no-animation"
+              }`}
+            ></div>
+            <div
+              className={`slide5-bg-2 slide-bg ${
+                activeSlide.has(4) && "no-animation"
+              }`}
+            ></div>
             <div className="slide-content show-for-web">
-              <p>Value Engine.</p>
               <p>
-                {" "}
-                We are a group of{" "}
-                <span className="font-medium">difference-makers, </span>
-                high-
+                we run <br />a gathering place <br />
+                called RIFF.
+              </p>
+              <p>
+                radical ideas for future
+                <br /> + <br />
+                songlines by <br />
+                inspired professionals
                 <br />
-                performing individuals who have built exceptionally
-                <br />
-                successful companies, launched products used by
-                <br /> millions, and along the way created
-                <br /> billions in commercial value.
-              </p>
-              <p>
-                Our clients range from countless start-ups
-                <br /> to widely known brands such as{" "}
-                <span className="italic-font">
-                  The New York <br />
-                  Times,
-                </span>{" "}
-                Apple and creative work by Annie Leibovitz.
-              </p>
-            </div>
-            <div className="slide-content show-for-mob">
-              <p>Value Engine.</p>
-              <p>
-                {" "}
-                We are a group of{" "}
-                <span className="font-medium">difference-makers, </span> <br />
-                high-performing individuals <br /> who have built exceptionally
-                successful <br />
-                companies, launched products used by
-                <br /> millions, and along the way created
-                <br /> billions in commercial value.
-              </p>
-              <p>
-                Our clients range from countless
-                <br /> start-ups to widely known brands
-                <br /> such as{" "}
-                <span className="italic-font">The New York Times,</span> <br />
-                Apple and creative work
-                <br /> by Annie Leibovitz.
+                who happen to live <br />
+                somewhere
+                <br /> in california.
               </p>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
+        <SwiperSlide className={`swiper-slide ${isMobile && "next"}`}>
           <div className="slide-wrapper6">
-            <div className="slide6-bg-finish slide-bg"></div>
-            <div className="slide-content show-for-web">
-              <p>Community.</p>
-              <p>
-                We formed and manage RIFF, Radical Imagination
-                <br /> For Future, a members only clubhouse for the next
-                <br />
-                generation of creative, media, and technology executives
-                <br /> (who happen to live
-                <span className="font-medium"> somewhere in California</span>).
-              </p>
-              <p>
-                Together, we put forward a narrative of horizons.
-                <br /> Embracing complex subjects, contextualized ideas. <br />
-                Giving rise to a life, rich with possibility and play.
-              </p>
-            </div>
-            <div className="slide-content show-for-mob">
-              <p>Community.</p>
-              <p>
-                We formed and manage RIFF,
-                <br /> Radical Imagination For Future,
-                <br /> a members only clubhouse for the <br />
-                next generation of creative,
-                <br /> media, and technology executives
-                <br /> (who happen to live
-                <span className="font-medium"> somewhere in California</span>).
-              </p>
-              <p>
-                Together, we put forward
-                <br /> a narrative of horizons.
-                <br /> Embracing complex subjects,
-                <br /> contextualized ideas. <br />
-                Giving rise to a life,
-                <br /> rich with possibility + play.
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
-          <div className="slide-wrapper7">
-            <div className="slide7-bg-finish slide-bg"></div>
+            <div
+              className={`slide6-bg-1 slide-bg ${
+                activeSlide.has(5) && "no-animation"
+              }`}
+            ></div>
+            {isMobile && (
+              <>
+                <div
+                  className={`slide6-bg-2 slide-bg ${
+                    activeSlide.has(5) && "no-animation"
+                  }`}
+                ></div>
+                <div
+                  className={`slide6-bg-3 slide-bg ${
+                    activeSlide.has(5) && "no-animation"
+                  }`}
+                ></div>
+              </>
+            )}
             <div className="slide-content show-for-web">
               <p>
-                Working with LeftFront is{" "}
-                <span className="font-medium"> surfing for the mind.</span>{" "}
-                <br />
-                Sometimes jaw-dropping. Sometimes simple. <br />
-                Always honest.{" "}
+                feel free to <br />
+                call 818-963–2116
               </p>
-              <p>
-                Finally, yet importantly: we are about the human
-                <br /> touch. Feel free to connect.
-                <br /> +1–818–963–2116
-              </p>
-            </div>
-            <div className="slide-content show-for-mob">
-              <p>
-                Working with LeftFront is
-                <br />
-                <span className="font-medium"> surfing for the mind.</span>{" "}
-                <br />
-                Sometimes jaw-dropping.
-                <br /> Sometimes simple. <br />
-                Always honest.{" "}
-              </p>
-              <p>
-                Feel free to connect.
-                <br /> +1–818–963–2116
-              </p>
+              {isMobile ? (
+                <>
+                  <p>
+                    it will be neither <br />
+                    defined, <br />
+                    nor designed.
+                    <br />
+                  </p>
+                  <p>
+                    sometimes <br />
+                    jaw-dropping. <br />
+                    sometimes simple. <br />
+                    kind of like
+                    <br />
+                    surfing for the mind.
+                  </p>
+                </>
+              ) : (
+                <p>
+                  it will be neither <br />
+                  defined, <br />
+                  nor designed.
+                  <br /> sometimes <br />
+                  jaw-dropping. <br />
+                  sometimes simple. <br />
+                  kind of like
+                  <br />
+                  surfing for the mind.
+                </p>
+              )}
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className={`swiper-slide ${isMobile && 'next'}`}>
-          <div className="slide-wrapper8">
-            <div className="slide-content"></div>
-          </div>
-        </SwiperSlide>
+        {!isMobile && (
+          <SwiperSlide className={`swiper-slide ${isMobile && "next"}`}>
+            <div className="slide-wrapper8">
+              <div className="slide-content"></div>
+            </div>
+          </SwiperSlide>
+        )}
       </Swiper>
     </div>
   );
