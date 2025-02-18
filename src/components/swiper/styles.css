@@ -452,7 +452,7 @@
 
 @media (min-aspect-ratio: 16/10) {
   .slide-bg {
-    background-size: 110%;
+    background-size: 120%;
   }
   .slide-wrapper1 .slide-text,
   .slide-wrapper2 .slide-content,
