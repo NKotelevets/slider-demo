@@ -167,7 +167,7 @@ export function SwiperComponent() {
         keyboard={{
           enabled: true,
         }}
-        mousewheel={true}
+        mousewheel={false}
         slidesPerView={1}
         className="mySwiper"
         effect={"fade"}
