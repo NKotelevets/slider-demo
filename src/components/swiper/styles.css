@@ -420,7 +420,7 @@
     letter-spacing: 0.4px;
   }
 
-  .slide-wrapper1 .slide-text:first-child {
+  /* .slide-wrapper1 .slide-text:first-child {
     margin-bottom: 20px;
   }
 
@@ -449,7 +449,7 @@
 
   .slide-wrapper6 .slide-content p:last-child {
     margin-top: 20px;
-  }
+  } */
 }
 
 @media (min-aspect-ratio: 16/10) {
@@ -479,7 +479,7 @@
     letter-spacing: 0.4px;
   }
 
-  .slide-wrapper1 .slide-text:first-child {
+  /* .slide-wrapper1 .slide-text:first-child {
     margin-bottom: 20px;
   }
 
@@ -508,7 +508,7 @@
 
   .slide-wrapper6 .slide-content p:last-child {
     margin-top: 20px;
-  }
+  } */
 }
 
 @media screen and (max-width: 1024px) {
