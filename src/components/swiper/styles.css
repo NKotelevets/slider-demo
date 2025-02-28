@@ -123,49 +123,75 @@
   /* background-size: cover; */
   background-position: center;
   background-repeat: no-repeat;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .slide1-bg-1 {
   background-image: url(../../assets/slides_07_02_2025/slide_1_1.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 .slide1-bg-2 {
   background-image: url(../../assets/slides_07_02_2025/slide_1_2.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 .slide1-bg-3 {
   background-image: url(../../assets/slides_07_02_2025/slide_1_3.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 .slide1-bg-4 {
   background-image: url(../../assets/slides_07_02_2025/slide_1_4.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .slide2-bg-1 {
   background-image: url(../../assets/slides_07_02_2025/slide_2_1.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .slide3-bg-1 {
   background-image: url(../../assets/slides_07_02_2025/slide_3_1.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .slide3-bg-2 {
   background-image: url(../../assets/slides_07_02_2025/slide_3_2.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .slide4-bg-1 {
   background-image: url(../../assets/slides_07_02_2025/slide_4_1.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 .slide4-bg-2 {
   background-image: url(../../assets/slides_07_02_2025/slide_4_2.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .slide5-bg-1 {
   background-image: url(../../assets/slides_07_02_2025/slide_5_1.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 .slide5-bg-2 {
   background-image: url(../../assets/slides_07_02_2025/slide_5_2.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .slide6-bg-1 {
   background-image: url(../../assets/slides_07_02_2025/slide_6_1.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .swiper-slide-active .slide-wrapper1 .slide1-bg-1 {
