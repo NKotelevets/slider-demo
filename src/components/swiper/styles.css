@@ -308,7 +308,7 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-  bottom: 6.6vh !important;
+  bottom: 5.1vh !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -418,7 +418,7 @@
 }
 
 .slide-wrapper6 .slide-content p:first-child {
-  margin-bottom: 2.2vh;
+  margin-bottom: 3.2vh;
   /* margin-bottom: 30px; */
 }
 .slide-wrapper6 .slide-content p:last-child {
