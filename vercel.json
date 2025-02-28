@@ -1,0 +1,9 @@
+{
+  "images": {
+    "sizes": [640, 750, 828, 1080, 1200, 1920],
+    "domains": ["slider-demo-8wbw.vercel.app/"],
+    "minimumCacheTTL": 60,
+    "formats": ["image/webp", "image/avif", "image/jpeg", "image/png"],
+    "quality": 100
+  }
+}
