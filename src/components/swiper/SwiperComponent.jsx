@@ -300,7 +300,11 @@ export function SwiperComponent() {
                 <p className="slide3-description">
                   from countless start-ups, <br />
                   to legacy enterprises
-                  <br /> such as The New York Times, <br />
+                  <br /> such as{" "}
+                  <span className="slide3-description-italic">
+                    The New York Times
+                  </span>
+                  , <br />
                   and iconic talent
                   <br /> like Annie Leibovitz.
                 </p>

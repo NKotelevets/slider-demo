@@ -452,6 +452,11 @@
   /* margin-bottom: 30px; */
 }
 
+.slide3-description-italic {
+  font-family: ITCAmericanTypewriterProLightItalic;
+  /* font-style: italic; */
+}
+
 @media screen and (max-width: 12500px) {
   /* .slide-wrapper2 .slide-content,
   .slide-wrapper3 .slide3-description,
