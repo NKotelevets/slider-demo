@@ -34,8 +34,8 @@ export function SwiperComponent() {
       return `<svg
           id="Page_7"
           data-name="Page 7"
-          width="10"
-          height="10"
+          width="9"
+          height="9"
           viewBox="0 0 12 12"
         >
           <g id="Polygon_1" data-name="Polygon 1" fill="rgba(255,255,255,0.1)">
@@ -51,8 +51,8 @@ export function SwiperComponent() {
       return `<svg
           id="Page_5"
           data-name="Page 5"
-          width="10"
-          height="10"
+          width="9"
+          height="9"
           viewBox="0 0 12 12"
         >
           <g
@@ -67,7 +67,7 @@ export function SwiperComponent() {
           </g>
         </svg>`;
     } else if (index == 3) {
-      return `<svg width="12" height="12" viewBox="0 0 14.507 14.563">
+      return `<svg width="11" height="11" viewBox="0 0 14.507 14.563">
           <g id="Page_4" data-name="Page 4" transform="translate(1.268 1.367)">
             <path
               id="Path_31"
@@ -85,8 +85,8 @@ export function SwiperComponent() {
         <svg
           id="Page_6"
           data-name="Page 6"
-          width="9"
-          height="9"
+          width="8"
+          height="8"
           viewBox="0 0 11 11"
         >
           <g
