@@ -152,8 +152,7 @@ export function SwiperComponent() {
   };
 
   const handleSlideChange = (swiper) => {
-    !isMobile &&
-      setActiveSlide((prev) => new Set(prev).add(swiper.previousIndex));
+    setActiveSlide((prev) => new Set(prev).add(swiper.previousIndex));
   };
 
   return (

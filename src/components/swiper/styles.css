@@ -662,7 +662,7 @@
     margin-bottom: 20px;
   }
   .slide-wrapper1 .slide-content {
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
   }
 
   .slide-wrapper2 .slide-content {
@@ -684,11 +684,11 @@
     letter-spacing: 0.4px;
   }
   .slide-wrapper3 .slide3-description:first-child {
-    margin-bottom: 20px !important;
+    margin-bottom: 7px !important;
   }
 
   .slide-wrapper3 .slide-content {
-    margin-top: 190px;
+    margin-top: 30vh;
   }
 
   .slide-wrapper4 .slide-content p:first-child {
@@ -702,9 +702,17 @@
     margin-bottom: 20px;
   }
 
+  .slide-wrapper5 .slide-content {
+    margin-top: 19vh;
+  }
+
   .slide-wrapper6 .slide-content p {
     margin-bottom: 0px;
     margin-top: 0px;
+  }
+
+  .slide-wrapper1 .slide-content {
+    margin-top: 1vh;
   }
   .slide-wrapper6 .slide-content p:first-child {
     margin-bottom: 20px;
