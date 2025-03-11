@@ -152,7 +152,8 @@ export function SwiperComponent() {
   };
 
   const handleSlideChange = (swiper) => {
-    setActiveSlide((prev) => new Set(prev).add(swiper.previousIndex));
+    !isMobile &&
+      setActiveSlide((prev) => new Set(prev).add(swiper.previousIndex));
   };
 
   return (
@@ -186,22 +187,22 @@ export function SwiperComponent() {
           <div className="slide-wrapper1">
             <div
               className={`slide1-bg-1 slide-bg ${
-                activeSlide.has(0) && "no-animation"
+                activeSlide.has(isMobile ? 1 : 0) && "no-animation"
               }`}
             ></div>
             <div
               className={`slide1-bg-2 slide-bg ${
-                activeSlide.has(0) && "no-animation"
+                activeSlide.has(isMobile ? 1 : 0) && "no-animation"
               }`}
             ></div>
             <div
               className={`slide1-bg-3 slide-bg ${
-                activeSlide.has(0) && "no-animation"
+                activeSlide.has(isMobile ? 1 : 0) && "no-animation"
               }`}
             ></div>
             <div
               className={`slide1-bg-4 slide-bg ${
-                activeSlide.has(0) && "no-animation"
+                activeSlide.has(isMobile ? 1 : 0) && "no-animation"
               }`}
             ></div>
 
@@ -245,7 +246,7 @@ export function SwiperComponent() {
           <div className="slide-wrapper2">
             <div
               className={`slide2-bg-1 slide-bg  ${
-                activeSlide.has(1) && "no-animation"
+                activeSlide.has(isMobile ? 2 : 1) && "no-animation"
               }`}
             ></div>
 
@@ -279,12 +280,12 @@ export function SwiperComponent() {
           <div className="slide-wrapper3">
             <div
               className={`slide3-bg-1 slide-bg ${
-                activeSlide.has(2) && "no-animation"
+                activeSlide.has(isMobile ? 3 : 2) && "no-animation"
               }`}
             ></div>
             <div
               className={`slide3-bg-2 slide-bg ${
-                activeSlide.has(2) && "no-animation"
+                activeSlide.has(isMobile ? 3 : 2) && "no-animation"
               }`}
             ></div>
             <div className="slide-content show-for-web">
@@ -315,12 +316,12 @@ export function SwiperComponent() {
           <div className="slide-wrapper4">
             <div
               className={`slide4-bg-1 slide-bg ${
-                activeSlide.has(3) && "no-animation"
+                activeSlide.has(isMobile ? 4 : 3) && "no-animation"
               }`}
             ></div>
             <div
               className={`slide4-bg-2 slide-bg ${
-                activeSlide.has(3) && "no-animation"
+                activeSlide.has(isMobile ? 4 : 3) && "no-animation"
               }`}
             ></div>
 
@@ -344,12 +345,12 @@ export function SwiperComponent() {
           <div className="slide-wrapper5">
             <div
               className={`slide5-bg-1 slide-bg ${
-                activeSlide.has(4) && "no-animation"
+                activeSlide.has(isMobile ? 5 : 4) && "no-animation"
               }`}
             ></div>
             <div
               className={`slide5-bg-2 slide-bg ${
-                activeSlide.has(4) && "no-animation"
+                activeSlide.has(isMobile ? 5 : 4) && "no-animation"
               }`}
             ></div>
             <div className="slide-content show-for-web">
@@ -374,19 +375,19 @@ export function SwiperComponent() {
           <div className="slide-wrapper6">
             <div
               className={`slide6-bg-1 slide-bg ${
-                activeSlide.has(5) && "no-animation"
+                activeSlide.has(isMobile ? 6 : 5) && "no-animation"
               }`}
             ></div>
             {isMobile && (
               <>
                 <div
                   className={`slide6-bg-2 slide-bg ${
-                    activeSlide.has(5) && "no-animation"
+                    activeSlide.has(isMobile ? 6 : 5) && "no-animation"
                   }`}
                 ></div>
                 <div
                   className={`slide6-bg-3 slide-bg ${
-                    activeSlide.has(5) && "no-animation"
+                    activeSlide.has(isMobile ? 6 : 5) && "no-animation"
                   }`}
                 ></div>
               </>
