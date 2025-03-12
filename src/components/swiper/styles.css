@@ -712,7 +712,7 @@
   }
 
   .slide-wrapper1 .slide-content {
-    margin-top: 1vh;
+    margin-bottom: 9vh;
   }
   .slide-wrapper6 .slide-content p:first-child {
     margin-bottom: 20px;
@@ -731,5 +731,12 @@
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
     display: none;
+  }
+  .slide-wrapper2 .slide-content {
+    margin-bottom: 11.3vh;
+  }
+
+  .slide-wrapper2 .slide-content p:last-child {
+    margin-top: 2vh;
   }
 }
