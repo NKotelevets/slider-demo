@@ -127,7 +127,7 @@
   image-rendering: crisp-edges;
 }
 
-.slide1-bg-1 {
+/* .slide1-bg-1 {
   background-image: url(../../assets/slides_07_02_2025/slide_1_1.png);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
@@ -144,6 +144,12 @@
 }
 .slide1-bg-4 {
   background-image: url(../../assets/slides_07_02_2025/slide_1_4.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+} */
+
+.slide1-bg {
+  background-image: url(../../assets/slides_07_02_2025/slide_1.png);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
@@ -166,7 +172,7 @@
   image-rendering: crisp-edges;
 }
 
-.slide4-bg-1 {
+/* .slide4-bg-1 {
   background-image: url(../../assets/slides_07_02_2025/slide_4_1.png);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
@@ -175,15 +181,27 @@
   background-image: url(../../assets/slides_07_02_2025/slide_4_2.png);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+} */
+
+.slide4-bg {
+  background-image: url(../../assets/slides_07_02_2025/slide_4.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
-.slide5-bg-1 {
+/* .slide5-bg-1 {
   background-image: url(../../assets/slides_07_02_2025/slide_5_1.png);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 .slide5-bg-2 {
   background-image: url(../../assets/slides_07_02_2025/slide_5_2.png);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+} */
+
+.slide5-bg {
+  background-image: url(../../assets/slides_07_02_2025/slide_5.png);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
@@ -194,7 +212,14 @@
   image-rendering: crisp-edges;
 }
 
-.swiper-slide-active .slide-wrapper1 .slide1-bg-1 {
+.slide1-bg {
+  animation: changeBg ease-in-out 0.25s;
+  -webkit-animation: changeBg ease-in-out 0.25s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+/* .swiper-slide-active .slide-wrapper1 .slide1-bg-1 {
   animation: changeBg ease-in-out 1s;
   -webkit-animation: changeBg ease-in-out 1s;
   animation-fill-mode: forwards;
@@ -222,14 +247,14 @@
   animation-fill-mode: forwards;
   animation-delay: 5.2s;
   -webkit-animation-delay: 5.2s;
-}
+} */
 
 .swiper-slide-active .slide-wrapper2 .slide2-bg-1 {
-  animation: changeBg ease-in 1.5s;
-  -webkit-animation: changeBg ease-in 1.5s;
+  animation: changeBg ease-in 0.25s;
+  -webkit-animation: changeBg ease-in 0.25s;
   animation-fill-mode: forwards;
-  animation-delay: 2s;
-  -webkit-animation-delay: 2s;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 
 .swiper-slide-active .slide-wrapper3 .slide3-bg-1 {
@@ -248,7 +273,7 @@
   -webkit-animation-delay: 3.5s;
 }
 
-.swiper-slide-active .slide-wrapper4 .slide4-bg-1 {
+/* .swiper-slide-active .slide-wrapper4 .slide4-bg-1 {
   animation: changeBg ease-in 1.5s;
   -webkit-animation: changeBg ease-in 1.5s;
   animation-fill-mode: forwards;
@@ -262,9 +287,16 @@
   animation-fill-mode: forwards;
   animation-delay: 3.5s;
   -webkit-animation-delay: 3.5s;
+} */
+.swiper-slide-active .slide-wrapper4 .slide4-bg {
+  animation: changeBg ease-in-out 0.25s;
+  -webkit-animation: changeBg ease-in-out 0.25s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 
-.swiper-slide-active .slide-wrapper5 .slide5-bg-1 {
+/* .swiper-slide-active .slide-wrapper5 .slide5-bg-1 {
   animation: changeBg ease-in 1.5s;
   -webkit-animation: changeBg ease-in 1.5s;
   animation-fill-mode: forwards;
@@ -278,14 +310,22 @@
   animation-fill-mode: forwards;
   animation-delay: 3.5s;
   -webkit-animation-delay: 3.5s;
+} */
+
+.swiper-slide-active .slide-wrapper5 .slide5-bg {
+  animation: changeBg ease-in-out 0.25s;
+  -webkit-animation: changeBg ease-in-out 0.25s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 
 .swiper-slide-active .slide-wrapper6 .slide6-bg-1 {
-  animation: changeBg ease-in-out 1.5s;
-  -webkit-animation: changeBg ease-in-out 1.5s;
+  animation: changeBg ease-in-out 0.25s;
+  -webkit-animation: changeBg ease-in-out 0.25s;
   animation-fill-mode: forwards;
-  animation-delay: 2s;
-  -webkit-animation-delay: 2s;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 
 .swiper-slide-active .slide-wrapper8 .slide-content {
@@ -562,7 +602,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .slide1-bg-1 {
+  /* .slide1-bg-1 {
     background-image: url(../../assets/slides_07_02_2025/mob_2_1.png);
   }
   .slide1-bg-2 {
@@ -573,6 +613,10 @@
   }
   .slide1-bg-4 {
     background-image: url(../../assets/slides_07_02_2025/mob_2_4.png);
+  } */
+
+  .slide1-bg {
+    background-image: url(../../assets/slides_07_02_2025/mob_2.png);
   }
 
   .slide2-bg-1 {
@@ -590,11 +634,15 @@
     background-image: url(../../assets/slides_07_02_2025/mob_4_2.png);
   }
 
-  .slide4-bg-1 {
+  /* .slide4-bg-1 {
     background-image: url(../../assets/slides_07_02_2025/mob_5_1.png);
   }
   .slide4-bg-2 {
     background-image: url(../../assets/slides_07_02_2025/mob_5_2.png);
+  } */
+
+  .slide4-bg {
+    background-image: url(../../assets/slides_07_02_2025/mob_5.png);
   }
 
   .slide5-bg-1 {
@@ -604,7 +652,11 @@
     background-image: url(../../assets/slides_07_02_2025/mob_6_2.png);
   }
 
-  .slide6-bg-1 {
+  .slide5-bg {
+    background-image: url(../../assets/slides_07_02_2025/mob_6.png);
+  }
+
+  /* .slide6-bg-1 {
     background-image: url(../../assets/slides_07_02_2025/mob_7_1.png);
   }
 
@@ -614,7 +666,12 @@
 
   .slide6-bg-3 {
     background-image: url(../../assets/slides_07_02_2025/mob_7_3.png);
+  } */
+
+  .slide6-bg {
+    background-image: url(../../assets/slides_07_02_2025/mob_7.png);
   }
+
   .swiper-slide {
     background-image: url(../../assets/slides_07_02_2025/mob_background.png);
     background-color: rgba(244, 244, 245, 0.7);
@@ -625,7 +682,15 @@
     background-size: 100%;
   }
 
-  .swiper-slide-active .slide-wrapper6 .slide6-bg-1 {
+  .swiper-slide-active .slide-wrapper6 .slide6-bg {
+    animation: changeBg ease-in-out 0.25s;
+    -webkit-animation: changeBg ease-in-out 0.25s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+  }
+
+  /* .swiper-slide-active .slide-wrapper6 .slide6-bg-1 {
     animation: changeBg ease-in-out 1s;
     -webkit-animation: changeBg ease-in-out 1s;
     animation-fill-mode: forwards;
@@ -647,7 +712,7 @@
     animation-fill-mode: forwards;
     animation-delay: 3s;
     -webkit-animation-delay: 3s;
-  }
+  } */
 
   .swiper-slide-active .slide-wrapper8 .slide-content {
     width: 220px;

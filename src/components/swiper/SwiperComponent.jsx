@@ -185,6 +185,11 @@ export function SwiperComponent() {
         <SwiperSlide className={`swiper-slide slide1 ${isMobile && "next"}`}>
           <div className="slide-wrapper1">
             <div
+              className={`slide1-bg slide-bg ${
+                activeSlide.has(isMobile ? 1 : 0) && "no-animation"
+              }`}
+            ></div>
+            {/* <div
               className={`slide1-bg-1 slide-bg ${
                 activeSlide.has(isMobile ? 1 : 0) && "no-animation"
               }`}
@@ -203,7 +208,7 @@ export function SwiperComponent() {
               className={`slide1-bg-4 slide-bg ${
                 activeSlide.has(isMobile ? 1 : 0) && "no-animation"
               }`}
-            ></div>
+            ></div> */}
 
             <div className="slide-content">
               {!isMobile ? (
@@ -314,6 +319,12 @@ export function SwiperComponent() {
         <SwiperSlide className={`swiper-slide ${isMobile && "next"}`}>
           <div className="slide-wrapper4">
             <div
+              className={`slide4-bg slide-bg ${
+                activeSlide.has(isMobile ? 4 : 3) && "no-animation"
+              }`}
+            ></div>
+
+            {/* <div
               className={`slide4-bg-1 slide-bg ${
                 activeSlide.has(isMobile ? 4 : 3) && "no-animation"
               }`}
@@ -322,7 +333,7 @@ export function SwiperComponent() {
               className={`slide4-bg-2 slide-bg ${
                 activeSlide.has(isMobile ? 4 : 3) && "no-animation"
               }`}
-            ></div>
+            ></div> */}
 
             <div className="slide-content show-for-web">
               <p>
@@ -343,6 +354,12 @@ export function SwiperComponent() {
         <SwiperSlide className={`swiper-slide ${isMobile && "next"}`}>
           <div className="slide-wrapper5">
             <div
+              className={`slide5-bg slide-bg ${
+                activeSlide.has(isMobile ? 5 : 4) && "no-animation"
+              }`}
+            ></div>
+
+            {/* <div
               className={`slide5-bg-1 slide-bg ${
                 activeSlide.has(isMobile ? 5 : 4) && "no-animation"
               }`}
@@ -351,7 +368,7 @@ export function SwiperComponent() {
               className={`slide5-bg-2 slide-bg ${
                 activeSlide.has(isMobile ? 5 : 4) && "no-animation"
               }`}
-            ></div>
+            ></div> */}
             <div className="slide-content show-for-web">
               <p>
                 we run <br />a gathering place <br />
@@ -372,13 +389,28 @@ export function SwiperComponent() {
         </SwiperSlide>
         <SwiperSlide className={`swiper-slide ${isMobile && "next"}`}>
           <div className="slide-wrapper6">
-            <div
+            {isMobile ? (
+              <div
+                className={`slide6-bg slide-bg ${
+                  activeSlide.has(isMobile ? 6 : 5) && "no-animation"
+                }`}
+              ></div>
+            ) : (
+              <div
+                className={`slide6-bg-1 slide-bg ${
+                  activeSlide.has(isMobile ? 6 : 5) && "no-animation"
+                }`}
+              ></div>
+            )}
+            {/* <div
               className={`slide6-bg-1 slide-bg ${
                 activeSlide.has(isMobile ? 6 : 5) && "no-animation"
               }`}
-            ></div>
-            {isMobile && (
+            ></div> */}
+            {/* {isMobile && (
               <>
+            
+
                 <div
                   className={`slide6-bg-2 slide-bg ${
                     activeSlide.has(isMobile ? 6 : 5) && "no-animation"
@@ -390,7 +422,7 @@ export function SwiperComponent() {
                   }`}
                 ></div>
               </>
-            )}
+            )} */}
             <div className="slide-content show-for-web">
               <p>
                 feel free to <br />
