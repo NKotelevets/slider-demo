@@ -424,7 +424,7 @@ export function SwiperComponent() {
               </>
             )} */}
             <div className="slide-content show-for-web">
-              <p>
+              <p className="phone-number">
                 feel free to <br />
                 call 818-963–2116
               </p>
