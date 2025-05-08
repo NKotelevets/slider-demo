@@ -447,14 +447,9 @@ export function SwiperComponent() {
                 </>
               ) : (
                 <p>
-                  it will be neither <br />
-                  defined, <br />
-                  nor designed.
-                  <br /> sometimes <br />
-                  jaw-dropping. <br />
-                  sometimes simple. <br />
-                  kind of like
-                  <br />
+                  it will be neither defined, nor designed. <br />
+                  sometimes jaw-dropping. sometimes simple. <br />
+                  kind of like <br />
                   surfing for the mind.
                 </p>
               )}
